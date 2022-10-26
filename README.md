@@ -2,43 +2,42 @@
 A video game library manager with support for third-party libraries. Includes a user-friendly interface for viewing, downloading and installing your games.
 
 
-### Screenshots:
+## Screenshots:
 ---------
-
 If you find DragGames useful please consider supporting the lead developer [AlexanderKhasaev](link) on [Patreon](link).
 
-Features
+## Features
 ---------
 The launcher has a clear and concise interface. Easy to download and install games. View game information and news. To all this is added the speed of startup and operation.
 
-Download
+## Download
 ---------
 
 Grab the latest installer or portable package from the [download](link) page. Drag Games will automatically notify you about a new version upon release.
 
 Requirements: Windows 7, 8 or 10 and [.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53344)
 
-Extensions
+## Extensions
 ---------
 Drag Games can be extended with plugins (written in .NET languages).
 
-Known Issues
+## Known Issues
 ---------
 The list of known issues and solutions can be found [on the wiki](link).
 
-Privacy Statement
+## Privacy Statement
 ---------
 Drag Games does not store any user information, and you do not need to provide any information to import installed games. The process of connecting to an account is usually carried out through the official website of the company.
 
 All information about your library is stored locally on your PC.
 
 
-### Themes
+## Themes
 The launcher has two main themes: 
 1. Dark Theme is the standard theme of the Drag Games game launcher. In this theme, dark and golden tones prevail.
 2. Light theme - theme in light colors
 
-### Contributions to the code
+## Contributions to the code
 Please ask the appropriate question first before starting to implement something to make sure it is possible to do it. If there is any problem, as a result of the implementation of your functions / fixes. Please contact here : [AlexanderKhasaev](link).*
 
 As for the code style, there are only a few basic rules:
@@ -48,17 +47,17 @@ As for the code style, there are only a few basic rules:
 - add an empty line between the end of the code block `}` and an additional expression
 - always encapsulate the code body after *if, for, foreach, while*, etc. with curly braces:
 
-Branches
+## Branches
 ---------
 * `master` - default branch representing state of currently released build.
 * `devel` - development branch containing latest changes. All pull requests should be made against `devel` branch.
 * `devel*` - development branches for specific features/versions.
 
-Development
+## Development
 ---------
 
 
-Others
+## Others
 ---------
 
 .NET development tools courtesy of [JetBrains](https://www.jetbrains.com/?from=Playnite)
