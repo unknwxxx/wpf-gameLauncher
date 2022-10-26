@@ -61,5 +61,5 @@ As for the code style, there are only a few basic rules:
 ---------
 
 .NET development tools:
-<img src="(https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2018/11/preview-thumb.png)" width="32">
+<img src="[https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2018/11/preview-thumb.png]" width="32">
 
