@@ -60,7 +60,7 @@ As for the code style, there are only a few basic rules:
 ## Others
 ---------
 
-.NET development tools courtesy of ([[https://www.jetbrains.com/?from=Playnite](https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Fvisual-studio-logo%2F&psig=AOvVaw3PUdQDW71eoPcJF0nZ_Tsr&ust=1666876058283000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjMpK77_foCFQAAAAAdAAAAABAL)])
+.NET development tools courtesy of ([[https://www.google.com/url?sa=i&url=https%3A%2F%2Fdevblogs.microsoft.com%2Fvisualstudio%2Fa-preview-of-ux-and-ui-changes-in-visual-studio-2019%2F&psig=AOvVaw3PUdQDW71eoPcJF0nZ_Tsr&ust=1666876058283000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjMpK77_foCFQAAAAAdAAAAABAq)])
 
 [![jetbrains](https://user-images.githubusercontent.com/3874087/128503701-884cdae4-3283-4d67-8ad1-6103e777a660.png)](https://www.jetbrains.com/?from=Playnite)
 
