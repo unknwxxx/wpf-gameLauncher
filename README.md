@@ -3,7 +3,7 @@ A video game library manager with support for third-party libraries. Includes a 
 
 Screenshots:
 
-*If you find DragGames useful please consider supporting the lead developer [AlexanderKhasaev](link) on [Patreon](link).*
+*If you find DragGames useful please consider supporting the lead developer [AlexanderKhasaev](link) on [Patreon](link).
 
 Features
 ---------
@@ -12,13 +12,13 @@ The launcher has a clear and concise interface. Easy to download and install gam
 Download
 ---------
 
-Grab the latest installer or portable package from the [download](link) page. Playnite will automatically notify you about a new version upon release.
+Grab the latest installer or portable package from the [download](link) page. Drag Games will automatically notify you about a new version upon release.
 
 Requirements: Windows 7, 8 or 10 and [.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53344)
 
 Extensions
 ---------
-Playnite can be extended with plugins (written in .NET languages).
+Drag Games can be extended with plugins (written in .NET languages).
 
 Known Issues
 ---------
