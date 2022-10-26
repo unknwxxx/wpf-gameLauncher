@@ -114,7 +114,7 @@
                     <StackPanel Width="440" Height="680" VerticalAlignment="Center" HorizontalAlignment="Center">
 
                         <TextBlock Width="320" FontSize="16" Margin="0, 100, 0, 45" Text="Sign in with an Drag Games account." Foreground="White" FontStretch="Expanded" TextAlignment="Center" TextDecorations="{x:Null}" TextWrapping="Wrap" FontWeight="Medium" FontFamily="/launcher-master;component/Fonts/#Brutal Type"/>
-
+                        
                         <TextBox x:Name="LoginTextBox" Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}" Width="320" Height="60" Padding="15, 0, 0, 0" Style="{StaticResource TextBoxStyle}" Background="{x:Null}" BorderBrush="#26FFFFFF"  SelectionBrush="White" FontFamily="Inter" Foreground="White" CaretBrush="White" MaxLength="50" MaxLines="50"/>
 
                         <Grid Width="320" Height="60" Margin="0 , 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center">

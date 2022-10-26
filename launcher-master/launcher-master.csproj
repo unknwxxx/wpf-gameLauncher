@@ -176,5 +176,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="СustomControls\68747470733a2f2f706c61796e6974652e6c696e6b2f6170706c6f676f2e706e67.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
