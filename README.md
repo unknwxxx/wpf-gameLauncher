@@ -1,7 +1,9 @@
 # <img src="https://playnite.link/applogo.png" width="32">  Drag Games [![Crowdin](https://badges.crowdin.net/playnite/localized.svg)](https://crowdin.com/project/playnite)
 A video game library manager with support for third-party libraries. Includes a user-friendly interface for viewing, downloading and installing your games.
 
-Screenshots:
+
+### Screenshots:
+---------
 
 If you find DragGames useful please consider supporting the lead developer [AlexanderKhasaev](link) on [Patreon](link).
 
