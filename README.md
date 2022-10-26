@@ -2,7 +2,7 @@
 A video game library manager with support for third-party libraries. Includes a user-friendly interface for viewing, downloading and installing your games.
 
 
-## Screenshots:
+### Screenshots:
 ---------
 If you find DragGames useful please consider supporting the lead developer [AlexanderKhasaev](link) on [Patreon](link).
 
@@ -10,7 +10,7 @@ If you find DragGames useful please consider supporting the lead developer [Alex
 ---------
 The launcher has a clear and concise interface. Easy to download and install games. View game information and news. To all this is added the speed of startup and operation.
 
-## Download
+### Download
 ---------
 
 Grab the latest installer or portable package from the [download](link) page. Drag Games will automatically notify you about a new version upon release.
@@ -32,12 +32,12 @@ Drag Games does not store any user information, and you do not need to provide a
 All information about your library is stored locally on your PC.
 
 
-## Themes
+### Themes
 The launcher has two main themes: 
 1. Dark Theme is the standard theme of the Drag Games game launcher. In this theme, dark and golden tones prevail.
 2. Light theme - theme in light colors
 
-## Contributions to the code
+### Contributions to the code
 Please ask the appropriate question first before starting to implement something to make sure it is possible to do it. If there is any problem, as a result of the implementation of your functions / fixes. Please contact here : [AlexanderKhasaev](link).*
 
 As for the code style, there are only a few basic rules:
@@ -47,7 +47,7 @@ As for the code style, there are only a few basic rules:
 - add an empty line between the end of the code block `}` and an additional expression
 - always encapsulate the code body after *if, for, foreach, while*, etc. with curly braces:
 
-## Branches
+### Branches
 ---------
 * `master` - default branch representing state of currently released build.
 * `devel` - development branch containing latest changes. All pull requests should be made against `devel` branch.
@@ -60,7 +60,7 @@ As for the code style, there are only a few basic rules:
 ## Others
 ---------
 
-.NET development tools courtesy of [JetBrains](https://www.jetbrains.com/?from=Playnite)
+.NET development tools courtesy of [JetBrains]([https://www.jetbrains.com/?from=Playnite](https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Fvisual-studio-logo%2F&psig=AOvVaw3PUdQDW71eoPcJF0nZ_Tsr&ust=1666876058283000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjMpK77_foCFQAAAAAdAAAAABAL))
 
 [![jetbrains](https://user-images.githubusercontent.com/3874087/128503701-884cdae4-3283-4d67-8ad1-6103e777a660.png)](https://www.jetbrains.com/?from=Playnite)
 
