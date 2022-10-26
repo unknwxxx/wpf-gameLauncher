@@ -60,10 +60,6 @@ As for the code style, there are only a few basic rules:
 ## Others
 ---------
 
-.NET development tools courtesy of <img src="https://playnite.link/applogo.png" width="32">
+.NET development tools:
 
 [![visual-studio-2019](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2018/11/preview-thumb.png)
-
-Code signing courtesy of [SignPath](https://about.signpath.io)
-
-[![Capture](https://user-images.githubusercontent.com/3874087/128503363-9c39f8cd-9900-4a8b-83f2-81359d4fc731.PNG)](https://about.signpath.io)
