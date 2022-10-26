@@ -62,7 +62,7 @@ As for the code style, there are only a few basic rules:
 
 .NET development tools courtesy of <img src="https://playnite.link/applogo.png" width="32">
 
-[![jetbrains]([https://user-images.githubusercontent.com/3874087/128503701-884cdae4-3283-4d67-8ad1-6103e777a660.png)](https://www.jetbrains.com/?from=Playnite](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdevblogs.microsoft.com%2Fvisualstudio%2Fa-preview-of-ux-and-ui-changes-in-visual-studio-2019%2F&psig=AOvVaw3PUdQDW71eoPcJF0nZ_Tsr&ust=1666876058283000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjMpK77_foCFQAAAAAdAAAAABAq))
+[![visual-studio-2019]([[https://user-images.githubusercontent.com/3874087/128503701-884cdae4-3283-4d67-8ad1-6103e777a660.png)](https://www.jetbrains.com/?from=Playnite](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdevblogs.microsoft.com%2Fvisualstudio%2Fa-preview-of-ux-and-ui-changes-in-visual-studio-2019%2F&psig=AOvVaw3PUdQDW71eoPcJF0nZ_Tsr&ust=1666876058283000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjMpK77_foCFQAAAAAdAAAAABAq](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2018/11/preview-thumb.png)))
 
 Code signing courtesy of [SignPath](https://about.signpath.io)
 
