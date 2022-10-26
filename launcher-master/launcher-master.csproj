@@ -110,38 +110,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Fonts\BrutalType-Black.eot" />
     <Resource Include="Fonts\BrutalType-Black.ttf" />
-    <None Include="Fonts\BrutalType-Black.woff" />
-    <None Include="Fonts\BrutalType-Black.woff2" />
-    <None Include="Fonts\BrutalType-Bold.eot" />
     <Resource Include="Fonts\BrutalType-Bold.ttf" />
-    <None Include="Fonts\BrutalType-Bold.woff" />
-    <None Include="Fonts\BrutalType-Bold.woff2" />
-    <None Include="Fonts\BrutalType-ExtraBold.eot" />
     <Resource Include="Fonts\BrutalType-ExtraBold.ttf" />
-    <None Include="Fonts\BrutalType-ExtraBold.woff" />
-    <None Include="Fonts\BrutalType-ExtraBold.woff2" />
-    <None Include="Fonts\BrutalType-ExtraLight.eot" />
     <Resource Include="Fonts\BrutalType-ExtraLight.ttf" />
-    <None Include="Fonts\BrutalType-ExtraLight.woff" />
-    <None Include="Fonts\BrutalType-ExtraLight.woff2" />
-    <None Include="Fonts\BrutalType-Light.eot" />
     <Resource Include="Fonts\BrutalType-Light.ttf" />
-    <None Include="Fonts\BrutalType-Light.woff" />
-    <None Include="Fonts\BrutalType-Light.woff2" />
-    <None Include="Fonts\BrutalType-Medium.eot" />
     <Resource Include="Fonts\BrutalType-Medium.ttf" />
-    <None Include="Fonts\BrutalType-Medium.woff" />
-    <None Include="Fonts\BrutalType-Medium.woff2" />
-    <None Include="Fonts\BrutalType-Thin.eot" />
     <Resource Include="Fonts\BrutalType-Thin.ttf" />
-    <None Include="Fonts\BrutalType-Thin.woff" />
-    <None Include="Fonts\BrutalType-Thin.woff2" />
-    <None Include="Fonts\BrutalType.eot" />
     <Resource Include="Fonts\BrutalType.ttf" />
-    <None Include="Fonts\BrutalType.woff" />
-    <None Include="Fonts\BrutalType.woff2" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,9 +151,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="СustomControls\68747470733a2f2f706c61796e6974652e6c696e6b2f6170706c6f676f2e706e67.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
