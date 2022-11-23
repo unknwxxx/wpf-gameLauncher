@@ -21,7 +21,7 @@
         <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type PasswordBox}">
@@ -39,7 +39,7 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
+
         <Style.Triggers>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -50,8 +50,6 @@
             </MultiTrigger>
         </Style.Triggers>
     </Style>
-
-    
     <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
         <Setter Property="FontFamily" Value="{StaticResource BrutalType}"/>
         <Setter Property="FontWeight" Value="Medium"/>

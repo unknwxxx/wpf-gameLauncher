@@ -117,9 +117,8 @@
 
                     <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-
                         <TextBlock Width="320"  
-                                   FontSize="17" 
+                                   FontSize="18" 
                                    Margin="0, 100, 0, 30" 
                                    Text="Sign in with an Drag Games account." 
                                    Foreground="White" 
@@ -156,24 +155,25 @@
                                       OpacityMask="White"
                                       ClickMode="Press"/>
 
-                            <TextBlock Height="25" 
+                            <TextBlock Style="{StaticResource ClickableTextBlock}"
+                                       Height="25" 
                                        Padding="0, 5, 0, 0"
                                        Margin="10, 0, 0, 0"
                                        Foreground="#99FFFFFF" 
                                        FontFamily="{StaticResource BrutalType}"
                                        Text="Remember me" 
                                        FontWeight="Medium"
-                                       FontSize="13"/>
+                                       FontSize="14"/>
 
-                            <TextBlock Height="25"
+                            <TextBlock Style="{StaticResource ClickableTextBlockUnderline}"
+                                       Height="25"
                                        Padding="0, 5, 0, 0"
-                                       Margin="65, 0, 0, 0"
+                                       Margin="53, 0, 0, 0"
                                        Foreground="White" 
                                        FontFamily="{StaticResource BrutalType}"
                                        Text="Fargot your Password?" 
-                                       TextDecorations="Underline"
                                        FontWeight="Normal"
-                                       FontSize="13"/>
+                                       FontSize="14"/>
                         </WrapPanel>
 
                         <Button Width="320" 
@@ -183,31 +183,44 @@
                                 FontFamily="{StaticResource BrutalType}" 
                                 Margin="0,35,0,0" 
                                 Content="Log in now" 
-                                FontSize="13" 
+                                FontSize="14" 
                                 FontWeight="Medium" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center"/>
 
-                        <TextBlock  
+
+
+                        <StackPanel Width="320" Margin="0, 40, 0, 0">
+                            
+                            <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
                             Width="320" 
-                            Margin="0, 40, 0 , 0 "
                             Text="Privacy Policy"  
-                            FontSize="13" 
+                            FontSize="14" 
                             Foreground="#FFFFFFFF" 
                             TextAlignment="Center" 
                             FontFamily="{StaticResource BrutalType}"
-                            TextDecorations="Underline"
-                            FontWeight="Normal" 
                             HorizontalAlignment="Center" 
                             VerticalAlignment="Center"/>
 
-                        <Grid Width="320" Margin="0, 15, 0 , 0">
-                            <TextBlock Width="320" Padding="0, 0, 70, 0" TextWrapping="Wrap" Text="Don`t have an Drag Games account?" Foreground="#99FFFFFF" FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <TextBlock Text="Sign up" Padding="0, 0, 40, 0" Foreground="White"  FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" HorizontalAlignment="Right" VerticalAlignment="Center" />
-                            <TextBlock Text="or" Foreground="#99FFFFFF" Padding="0, 0, 20, 0"  FontSize="13" FontFamily="{StaticResource BrutalType}" FontWeight="Medium" TextDecorations="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        </Grid>
-                        <TextBlock Width="320" Text="Sign In Later" Foreground="White" Margin="5"  FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Margin="0, 15, 0 , 0 "
+                                       Width="320"
+                                       TextAlignment="Center"
+                                       Text="Don`t have an Drag Games account?" 
+                                       FontWeight="Medium"
+                                       FontSize="14" 
+                                       FontFamily="{StaticResource BrutalType}" Foreground="#99FFFFFF" 
+                                       />
 
+                            <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
+                                       Margin="0, 15, 0 , 0 "
+                                       Text="Sign up" 
+                                       Foreground="White"
+                                       TextAlignment="Center"
+                                       FontSize="14" 
+                                       FontFamily="{StaticResource BrutalType}" 
+                                       />
+
+                        </StackPanel>
                     </StackPanel>
                 </Border>
             </ScrollViewer>
