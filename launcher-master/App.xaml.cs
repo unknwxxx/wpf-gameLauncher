@@ -18,6 +18,8 @@ namespace launcher_master
             {
                 if (LoginView.IsVisible == false && LoginView.IsLoaded)
                 {
+                    MainView mainWindow = new MainView();
+                    mainWindow.Show();
                     LoginView.Close();
                 }
             };

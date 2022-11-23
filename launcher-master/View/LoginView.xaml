@@ -9,8 +9,8 @@
         mc:Ignorable="d"
         Title="LoginView" ResizeMode="CanResize" 
         AllowsTransparency="True" 
-        Height="720" 
-        Width="1280" 
+        Height="580" 
+        Width="1040" 
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen" 
         Background="Transparent">
@@ -27,7 +27,7 @@
         <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
     </Window.Visibility>
 
-    <Border x:Name="Window" Height="Auto" CornerRadius="10" Background="#FF171717">
+    <Border x:Name="Window" Height="Auto" CornerRadius="5" Background="#FF121212">
 
         <Grid x:Name="WindowGrid" Width="Auto" Height="Auto">
 
@@ -51,7 +51,7 @@
                     Width="Auto" 
                     Height="Auto" 
                     CornerRadius="10" 
-                    Background="#FF171717" 
+                    Background="#FF121212" 
                     MouseDown="Window_MouseDown"/>
 
                 <Button Grid.Row="0" Grid.Column="1" x:Name = "MinimizeButton" Style="{StaticResource MinimizeButtonStyle}"  Width="45" Height="35" Click="MinimizeWindow">
@@ -65,7 +65,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-
                 <Button Grid.Row="0" Grid.Column="2" x:Name ="MaximizeButton" Style="{StaticResource MaximizeButtonStyle}" Width="45" Height="35" Click="MaximizeWindow">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -77,7 +76,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-
                 <Button Grid.Row="0" Grid.Column="3" x:Name = "CloseButton" Style="{StaticResource CloseWindowButtonStyle}"  Width="45" Height="35" Click="CloseWindow">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -115,13 +113,14 @@
 
             <ScrollViewer x:Name="Scroll" Grid.Row="1"  Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
 
-                <Border x:Name="Background" Grid.Row="1" Width="440" Height="680" Margin="0, 50, 0, 0" CornerRadius="5" Background="#303030" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border x:Name="Background" Grid.Row="1" Margin="0, 0, 0, 0" Width="430" Height="640" CornerRadius="5" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                    <StackPanel Width="440" Height="680" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                        <TextBlock Width="320" 
+
+                        <TextBlock Width="320"  
                                    FontSize="17" 
-                                   Margin="0, 100, 0, 50" 
+                                   Margin="0, 100, 0, 30" 
                                    Text="Sign in with an Drag Games account." 
                                    Foreground="White" 
                                    TextAlignment="Center" 
@@ -139,15 +138,15 @@
                                  MaxLength="50" 
                                  MaxLines="50"/>
 
-                        <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Width="320" Height="60" Margin="0 , 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Width="320" Height="60" Margin="0, 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
                                                                 Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
 
                         </сustomcontrols:BindablePasswordBox>
-                        
-                        <TextBlock Margin="60, 10, 0, 10" FontSize="12" Text="{Binding ErrorMessage}" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FFFF2121"/>
+
+                        <TextBlock Margin="55, 10, 0, 10" FontSize="12" Text="{Binding ErrorMessage}" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FFFF2121"/>
 
                         <WrapPanel Width="320" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            
+
                             <CheckBox Width="25"
                                       Style="{StaticResource CheckBoxStyle}"
                                       Height="25"
@@ -156,7 +155,7 @@
                                       BorderBrush="#FF353535" 
                                       OpacityMask="White"
                                       ClickMode="Press"/>
-                            
+
                             <TextBlock Height="25" 
                                        Padding="0, 5, 0, 0"
                                        Margin="10, 0, 0, 0"
@@ -165,7 +164,7 @@
                                        Text="Remember me" 
                                        FontWeight="Medium"
                                        FontSize="13"/>
-                            
+
                             <TextBlock Height="25"
                                        Padding="0, 5, 0, 0"
                                        Margin="65, 0, 0, 0"
@@ -189,14 +188,25 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center"/>
 
-                        <TextBlock  Width="420" Margin="0,45,0,0" Text="Privacy Policy"  FontSize="13" Foreground="#FFFFFFFF" TextAlignment="Center" FontFamily="/launcher-master;component/Fonts/#Brutal Type" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Width="420" Margin="0,30,0,0" Text="Don`t have an Drag Games account?" Foreground="#99FFFFFF" FontSize="13" TextAlignment="Center" FontFamily="/launcher-master;component/Fonts/#Brutal Type" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock  
+                            Width="320" 
+                            Margin="0, 40, 0 , 0 "
+                            Text="Privacy Policy"  
+                            FontSize="13" 
+                            Foreground="#FFFFFFFF" 
+                            TextAlignment="Center" 
+                            FontFamily="{StaticResource BrutalType}"
+                            TextDecorations="Underline"
+                            FontWeight="Normal" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
 
-                        <WrapPanel Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="Sign up" Foreground="White"  FontSize="13" TextAlignment="Center" FontFamily="/launcher-master;component/Fonts/#Brutal Type" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <TextBlock Margin="5,0,5,0" Text="or" Foreground="#99FFFFFF" TextAlignment="Center" FontSize="13" FontFamily="/launcher-master;component/Fonts/#Brutal Type" FontWeight="Normal" TextDecorations="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <TextBlock Text="Sign In Later" Foreground="White"  FontSize="13" TextAlignment="Center" FontFamily="/launcher-master;component/Fonts/#Brutal Type" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </WrapPanel>
+                        <Grid Width="320" Margin="0, 15, 0 , 0">
+                            <TextBlock Width="320" Padding="0, 0, 70, 0" TextWrapping="Wrap" Text="Don`t have an Drag Games account?" Foreground="#99FFFFFF" FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="Sign up" Padding="0, 0, 40, 0" Foreground="White"  FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                            <TextBlock Text="or" Foreground="#99FFFFFF" Padding="0, 0, 20, 0"  FontSize="13" FontFamily="{StaticResource BrutalType}" FontWeight="Medium" TextDecorations="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Grid>
+                        <TextBlock Width="320" Text="Sign In Later" Foreground="White" Margin="5"  FontSize="13" TextAlignment="Center" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                     </StackPanel>
                 </Border>
