@@ -7,16 +7,18 @@
         xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
         mc:Ignorable="d"
         Title="MainView" ResizeMode="CanResize" 
-        AllowsTransparency="True" 
         Height="580" 
         Width="1040"
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen" 
-        Background="Transparent">
+        Style="{StaticResource {x:Type Window}}">
+        
+    <Grid>
+        <Frame Name="MainFrame"
+               Source="Pages/LoadingPage.xaml"
+               NavigationUIVisibility="Hidden"
+               ></Frame>
 
-    <Border x:Name="Window" Height="Auto" CornerRadius="10" Background="#FF121212">
-        <Grid x:Name="WindowGrid" Width="Auto" Height="Auto">
-            
-        </Grid>
-    </Border>
+        
+    </Grid>
 </Window>
