@@ -10,7 +10,7 @@
         Title="LoginView" ResizeMode="CanResize" 
         AllowsTransparency="True" 
         Height="580" 
-        Width="1040" 
+        Width="1040"
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen" 
         Background="Transparent">
@@ -27,7 +27,7 @@
         <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
     </Window.Visibility>
 
-    <Border x:Name="Window" Height="Auto" CornerRadius="5" Background="#FF121212">
+    <Border x:Name="Window" Height="Auto" CornerRadius="6" Background="#FF121212">
 
         <Grid x:Name="WindowGrid" Width="Auto" Height="Auto">
 
@@ -114,7 +114,8 @@
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Center" 
                     BorderBrush="#00000000" 
-                    Foreground="#00000000" BorderThickness="0">
+                    Foreground="#00000000" 
+                    BorderThickness="0">
                 <Button.Background>
                     <ImageBrush RenderOptions.BitmapScalingMode="HighQuality" 
                                 ImageSource="/launcher-master;component/Images/settings.png" Stretch="None"/>
@@ -123,18 +124,14 @@
 
             <ScrollViewer x:Name="Scroll" Grid.Row="1"  Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
 
-                <Border x:Name="Background" Grid.Row="1" Margin="0, 0, 0, 0" Width="430" Height="640" CornerRadius="5" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border x:Name="Background" Grid.Row="1" Width="430" Height="640" RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
 
                     <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                        <Border Width="50" Height="50" Margin="0,40, 0, 0">
-                            
-                        </Border>
-
+                        
                         <TextBlock Width="320"  
                                    FontSize="17" 
-                                   Margin="0, 20, 0, 20" 
-                                   Text="Sign in with an Drag Games account." 
+                                   Margin="0, 80, 0, 45" 
+                                   Text="Sign in with an Drag Games account."
                                    Foreground="White"
                                    TextAlignment="Center" 
                                    TextDecorations="{x:Null}" 

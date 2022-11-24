@@ -38,9 +38,9 @@ namespace launcher_master
                 Window.CornerRadius = new CornerRadius(10);
             }
             else
-            {
+            { 
                 WindowState = WindowState.Maximized;
-                WindowGrid.Margin = new Thickness(9);
+                WindowGrid.Margin = new Thickness(10);
                 Window.CornerRadius = new CornerRadius(0);
             }
         }

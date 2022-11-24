@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
+        <Grid>
+            <Border Name="RootBorder"
+                    BorderThickness="0"
+                    BorderBrush="Blue">
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    
+    
+    <Style TargetType="{x:Type Window}">
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Ideal"/>
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"/>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="38"
+                              CornerRadius="6"
+                              GlassFrameThickness="0"
+                              NonClientFrameEdges="None"
+                              ResizeBorderThickness="1"
+                              UseAeroCaptionButtons="False"/>
+            </Setter.Value>
+        </Setter>
+        
+
+    </Style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</ResourceDictionary>
