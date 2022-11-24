@@ -3,12 +3,169 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:launcher_master.View.Pages"
+      xmlns:local="clr-namespace:launcher_master.View.Pages" xmlns:viewModel="clr-namespace:launcher_master.ViewModels" xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="SignInPage">
+      d:DesignHeight="540" d:DesignWidth="1040">
+
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModel:LoginViewModel IsViewVisible="True"></viewModel:LoginViewModel>
+    </Page.DataContext>
+
+    <Page.Visibility>
+        <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
+    </Page.Visibility>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
         
+        <Button Grid.Row="2" Width="19" 
+                    Height="19" 
+                    Margin="25, 0, 0, 0" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    BorderBrush="#00000000" 
+                    Foreground="#00000000" 
+                    BorderThickness="0">
+            <Button.Background>
+                <ImageBrush RenderOptions.BitmapScalingMode="HighQuality" 
+                                ImageSource="/launcher-master;component/Images/settings.png" Stretch="None"/>
+            </Button.Background>
+        </Button>
+
+        <ScrollViewer x:Name="Scroll" Grid.Row="1"  Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+
+            <Border x:Name="Background" Grid.Row="1" Width="430" Height="640" RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                    <TextBlock Width="320"  
+                                   FontSize="17" 
+                                   Margin="0, 80, 0, 45" 
+                                   Text="Sign in with an Drag Games account."
+                                   Foreground="White"
+                                   TextAlignment="Center" 
+                                   TextDecorations="{x:Null}" 
+                                   TextWrapping="Wrap" 
+                                   FontWeight="Medium" 
+                                   FontFamily="Brutal type"/>
+
+                    <TextBox Style="{StaticResource TextBoxStyle}"
+                                 x:Name="LoginTextBox"
+                                 Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}"  
+                                 Width="320" 
+                                 Height="60"
+                                 Padding="15, 0, 0, 0" 
+                                 MaxLength="50" 
+                                 MaxLines="50">
+
+
+                    </TextBox>
+
+                    <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Width="320" Height="60" Margin="0, 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                                Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+
+                    </сustomcontrols:BindablePasswordBox>
+
+                    <TextBlock Margin="55, 10, 0, 10" FontSize="12" Text="{Binding ErrorMessage}" 
+                               FontFamily="Brutal type" 
+                               FontWeight="Normal" 
+                               TextWrapping="Wrap" 
+                               HorizontalAlignment="Left" 
+                               Foreground="#FFFF2121"/>
+
+                    <WrapPanel Width="320" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                        <CheckBox Width="25"
+                                      Style="{StaticResource CheckBoxStyle}"
+                                      Height="25"
+                                      Foreground="White"
+                                      Background="#FF353535" 
+                                      BorderBrush="#FF353535" 
+                                      OpacityMask="White"
+                                      ClickMode="Press"/>
+
+                        <TextBlock Style="{StaticResource ClickableTextBlock}"
+                                       Height="25" 
+                                       Padding="0, 5, 0, 0"
+                                       Margin="10, 0, 0, 0"
+                                       Foreground="#99FFFFFF" 
+                                       FontFamily="Brutal type"
+                                       FontWeight="Medium"
+                                       Text="Remember me" 
+                                       FontSize="14"/>
+
+                        <TextBlock Style="{StaticResource ClickableTextBlockUnderline}"
+                                       Height="25"
+                                       Padding="0, 5, 0, 0"
+                                       Margin="53, 0, 0, 0"
+                                       Foreground="White" 
+                                       FontFamily="Brutal Type"
+                                       FontWeight="Normal"
+                                       Text="Fargot your Password?"
+                                       FontSize="14"/>
+                    </WrapPanel>
+
+                    <Button Width="320" 
+                                Height="60" 
+                                Style="{ StaticResource RoundedButtonStyle}" 
+                                Command="{Binding LoginCommand}" 
+                                FontFamily="Brutal type"
+                                Margin="0,35,0,0" 
+                                Content="Log in now" 
+                                FontSize="14" 
+                                FontWeight="Medium" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+
+
+
+                    <StackPanel Width="320" Margin="0, 40, 0, 0">
+
+                        <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
+                            Width="320" 
+                            Text="Privacy Policy"  
+                            FontSize="14" 
+                            Foreground="#FFFFFFFF" 
+                            TextAlignment="Center" 
+                            FontFamily="Brutal type"
+                            FontWeight="Normal"
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+
+                        <TextBlock Margin="0, 15, 0 , 0 "
+                                       Width="320"
+                                       TextAlignment="Center"
+                                       Text="Don`t have an Drag Games account?"
+                                       FontSize="14" 
+                                       FontFamily="Brutal type"
+                                       FontWeight="Medium"
+                                       Foreground="#99FFFFFF" 
+                                       />
+
+                        <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
+                                       Margin="0, 15, 0 , 0 "
+                                       Text="Sign up" 
+                                       Foreground="White"
+                                       TextAlignment="Center"
+                                       FontSize="14" 
+                                       FontFamily="Brutal type"
+                                       FontWeight="Normal" 
+                                       />
+
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
     </Grid>
+    
+    
+
 </Page>

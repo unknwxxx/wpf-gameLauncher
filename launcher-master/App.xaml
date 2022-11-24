@@ -15,8 +15,9 @@
 	            <ResourceDictionary Source="/ResourcesDictionary/Fonts.xaml"/>
 			 <ResourceDictionary Source="/ResourcesDictionary/Window.xaml"/>
 	        <ResourceDictionary Source="/ResourcesDictionary/ProgressBarStyle.xaml"/>
-                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+    
+
 </Application>

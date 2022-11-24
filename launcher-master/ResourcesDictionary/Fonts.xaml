@@ -8,4 +8,6 @@
         <Setter Property="FontFamily" Value="{StaticResource Segoe MDL2 Assets}"/>
         <Setter Property="FontWeight" Value="Bold"/>
     </Style>
+    
+    
 </ResourceDictionary>

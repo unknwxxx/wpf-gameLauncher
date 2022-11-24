@@ -137,7 +137,7 @@
                                    TextDecorations="{x:Null}" 
                                    TextWrapping="Wrap" 
                                    FontWeight="Medium" 
-                                   FontFamily="{StaticResource Segmdl2}"/>
+                                   FontFamily="{StaticResource Segoe MDL2 Assets}"/>
 
                         <TextBox Style="{StaticResource TextBoxStyle}"
                                  x:Name="LoginTextBox"
@@ -156,7 +156,7 @@
 
                         </сustomcontrols:BindablePasswordBox>
 
-                        <TextBlock Margin="55, 10, 0, 10" FontSize="12" Text="{Binding ErrorMessage}" FontFamily="{StaticResource BrutalType}" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FFFF2121"/>
+                        <TextBlock Margin="55, 10, 0, 10" FontSize="12" Text="{Binding ErrorMessage}" FontFamily="{StaticResource Segoe MDL2 Assets}" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FFFF2121"/>
 
                         <WrapPanel Width="320" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -174,7 +174,7 @@
                                        Padding="0, 5, 0, 0"
                                        Margin="10, 0, 0, 0"
                                        Foreground="#99FFFFFF" 
-                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontFamily="{StaticResource Segoe MDL2 Assets}"
                                        FontWeight="Medium"
                                        Text="Remember me" 
                                        FontSize="14"/>
@@ -182,9 +182,9 @@
                             <TextBlock Style="{StaticResource ClickableTextBlockUnderline}"
                                        Height="25"
                                        Padding="0, 5, 0, 0"
-                                       Margin="49, 0, 0, 0"
+                                       Margin="10, 0, 0, 0"
                                        Foreground="White" 
-                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontFamily="{StaticResource Segoe MDL2 Assets}"
                                        Text="Fargot your Password?"
                                        FontWeight="Normal"
                                        FontSize="14"/>
@@ -194,7 +194,7 @@
                                 Height="60" 
                                 Style="{ StaticResource RoundedButtonStyle}" 
                                 Command="{Binding LoginCommand}" 
-                                FontFamily="{StaticResource Segmdl2}" 
+                                FontFamily="{StaticResource Segoe MDL2 Assets}" 
                                 Margin="0,35,0,0" 
                                 Content="Log in now" 
                                 FontSize="14" 
@@ -212,7 +212,7 @@
                             FontSize="14" 
                             Foreground="#FFFFFFFF" 
                             TextAlignment="Center" 
-                            FontFamily="{StaticResource Segmdl2}"
+                            FontFamily="{StaticResource Segoe MDL2 Assets}"
                             FontWeight="Normal"
                             HorizontalAlignment="Center" 
                             VerticalAlignment="Center"/>
@@ -222,7 +222,7 @@
                                        TextAlignment="Center"
                                        Text="Don`t have an Drag Games account?"
                                        FontSize="14" 
-                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontFamily="{StaticResource Segoe MDL2 Assets}"
                                        FontWeight="Medium"
                                        Foreground="#99FFFFFF" 
                                        />
@@ -233,7 +233,7 @@
                                        Foreground="White"
                                        TextAlignment="Center"
                                        FontSize="14" 
-                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontFamily="{StaticResource Segoe MDL2 Assets}"
                                        FontWeight="Normal" 
                                        />
 

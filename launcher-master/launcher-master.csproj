@@ -120,14 +120,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Fonts\BrutalType-Black.ttf" />
-    <Resource Include="Fonts\BrutalType-Bold.ttf" />
-    <Resource Include="Fonts\BrutalType-ExtraBold.ttf" />
-    <Resource Include="Fonts\BrutalType-ExtraLight.ttf" />
-    <Resource Include="Fonts\BrutalType-Light.ttf" />
-    <Resource Include="Fonts\BrutalType-Medium.ttf" />
-    <Resource Include="Fonts\BrutalType-Thin.ttf" />
-    <Resource Include="Fonts\BrutalType.ttf" />
     <Resource Include="Fonts\segmdl2.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
