@@ -12,17 +12,19 @@ namespace launcher_master
     {
         protected void ApplicationStart(object sender, StartupEventArgs e)
         {
+            //MainView mainWindow = new MainView();
+            //mainWindow.Show();
             var LoginView = new LoginView();
             LoginView.Show();
-            LoginView.IsVisibleChanged += (s, ev) =>
-            {
-                if (LoginView.IsVisible == false && LoginView.IsLoaded)
-                {
-                    MainView mainWindow = new MainView();
-                    mainWindow.Show();
-                    LoginView.Close();
-                }
-            };
+            //LoginView.IsVisibleChanged += (s, ev) =>
+            //{
+            //    if (LoginView.IsVisible == false && LoginView.IsLoaded)
+            //    {
+            //        MainView mainWindow = new MainView();
+            //        mainWindow.Show();
+            //        LoginView.Close();
+            //    }
+            //};
         }
     }
 }

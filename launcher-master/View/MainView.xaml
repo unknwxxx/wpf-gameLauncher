@@ -8,86 +8,15 @@
         mc:Ignorable="d"
         Title="MainView" ResizeMode="CanResize" 
         AllowsTransparency="True" 
-        Height="720" 
-        Width="1280" 
+        Height="580" 
+        Width="1040"
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen" 
         Background="Transparent">
 
-    <Border x:Name="Window" Height="Auto" CornerRadius="10" Background="#FF171717">
+    <Border x:Name="Window" Height="Auto" CornerRadius="10" Background="#FF121212">
         <Grid x:Name="WindowGrid" Width="Auto" Height="Auto">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
             
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="45"/>
-                <ColumnDefinition Width="45"/>
-                <ColumnDefinition Width="45"/>
-                <ColumnDefinition Width="225*"/>
-
-                <ColumnDefinition Width="45"/>
-                <ColumnDefinition Width="45"/>
-                <ColumnDefinition Width="45"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Row="0" Grid.Column="4" x:Name = "MinimizeButton" Style="{StaticResource MinimizeButtonStyle}" Click="MinimizeWindow">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <Border Background="White" Width="12" Height="1">
-                                <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            </Border>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Grid.Row="0" Grid.Column="5" x:Name ="MaximizeButton" Style="{StaticResource MaximizeButtonStyle}" Click="MaximizeWindow">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <Border Width="13" Height="9" BorderThickness="1" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Grid.Row="0" Grid.Column="6" x:Name = "CloseButton" Style="{StaticResource CloseWindowButtonStyle}" Click="CloseWindow">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="0, 5, 0, 0" Background="{TemplateBinding Background}">
-                            <Border Background="White" Opacity="70" Width="13" Height="1" BorderBrush="White" OpacityMask="White" RenderTransformOrigin="0.5,0.5">
-                                <Border.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="-45"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Border.RenderTransform>
-
-                                <Border Background="White" Opacity="70" Height="1" BorderBrush="White" OpacityMask="White" RenderTransformOrigin="0.5,0.5" Width="13">
-                                    <Border.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform/>
-                                            <SkewTransform/>
-                                            <RotateTransform Angle="-90"/>
-                                            <TranslateTransform/>
-                                        </TransformGroup>
-                                    </Border.RenderTransform>
-                                </Border>
-                            </Border>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
         </Grid>
     </Border>
 </Window>

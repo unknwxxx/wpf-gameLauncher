@@ -34,7 +34,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Grid>
 
@@ -108,7 +108,17 @@
 
             </Grid>
 
-            <Button Grid.Row="2" Width="20" Height="20" Margin="20, 0, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#00000000" Foreground="#00000000">
+            <Button Grid.Row="2" Width="19" 
+                    Height="19" 
+                    Margin="25, 0, 0, 0" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    BorderBrush="#00000000" 
+                    Foreground="#00000000" BorderThickness="0">
+                <Button.Background>
+                    <ImageBrush RenderOptions.BitmapScalingMode="HighQuality" 
+                                ImageSource="/launcher-master;component/Images/settings.png" Stretch="None"/>
+                </Button.Background>
             </Button>
 
             <ScrollViewer x:Name="Scroll" Grid.Row="1"  Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
@@ -117,25 +127,32 @@
 
                     <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
 
+                        <Border Width="50" Height="50" Margin="0,40, 0, 0">
+                            
+                        </Border>
+
                         <TextBlock Width="320"  
-                                   FontSize="18" 
-                                   Margin="0, 100, 0, 30" 
+                                   FontSize="17" 
+                                   Margin="0, 20, 0, 20" 
                                    Text="Sign in with an Drag Games account." 
-                                   Foreground="White" 
+                                   Foreground="White"
                                    TextAlignment="Center" 
                                    TextDecorations="{x:Null}" 
                                    TextWrapping="Wrap" 
                                    FontWeight="Medium" 
-                                   FontFamily="{StaticResource BrutalType}"/>
+                                   FontFamily="{StaticResource Segmdl2}"/>
 
-                        <TextBox x:Name="LoginTextBox" 
-                                 Style="{StaticResource TextBoxStyle}" 
+                        <TextBox Style="{StaticResource TextBoxStyle}"
+                                 x:Name="LoginTextBox"
                                  Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}"  
                                  Width="320" 
                                  Height="60"
                                  Padding="15, 0, 0, 0" 
                                  MaxLength="50" 
-                                 MaxLines="50"/>
+                                 MaxLines="50">
+
+
+                        </TextBox>
 
                         <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Width="320" Height="60" Margin="0, 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
                                                                 Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
@@ -160,18 +177,18 @@
                                        Padding="0, 5, 0, 0"
                                        Margin="10, 0, 0, 0"
                                        Foreground="#99FFFFFF" 
-                                       FontFamily="{StaticResource BrutalType}"
-                                       Text="Remember me" 
+                                       FontFamily="{StaticResource Segmdl2}"
                                        FontWeight="Medium"
+                                       Text="Remember me" 
                                        FontSize="14"/>
 
                             <TextBlock Style="{StaticResource ClickableTextBlockUnderline}"
                                        Height="25"
                                        Padding="0, 5, 0, 0"
-                                       Margin="53, 0, 0, 0"
+                                       Margin="49, 0, 0, 0"
                                        Foreground="White" 
-                                       FontFamily="{StaticResource BrutalType}"
-                                       Text="Fargot your Password?" 
+                                       FontFamily="{StaticResource Segmdl2}"
+                                       Text="Fargot your Password?"
                                        FontWeight="Normal"
                                        FontSize="14"/>
                         </WrapPanel>
@@ -180,7 +197,7 @@
                                 Height="60" 
                                 Style="{ StaticResource RoundedButtonStyle}" 
                                 Command="{Binding LoginCommand}" 
-                                FontFamily="{StaticResource BrutalType}" 
+                                FontFamily="{StaticResource Segmdl2}" 
                                 Margin="0,35,0,0" 
                                 Content="Log in now" 
                                 FontSize="14" 
@@ -191,24 +208,26 @@
 
 
                         <StackPanel Width="320" Margin="0, 40, 0, 0">
-                            
+
                             <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
                             Width="320" 
                             Text="Privacy Policy"  
                             FontSize="14" 
                             Foreground="#FFFFFFFF" 
                             TextAlignment="Center" 
-                            FontFamily="{StaticResource BrutalType}"
+                            FontFamily="{StaticResource Segmdl2}"
+                            FontWeight="Normal"
                             HorizontalAlignment="Center" 
                             VerticalAlignment="Center"/>
 
                             <TextBlock Margin="0, 15, 0 , 0 "
                                        Width="320"
                                        TextAlignment="Center"
-                                       Text="Don`t have an Drag Games account?" 
-                                       FontWeight="Medium"
+                                       Text="Don`t have an Drag Games account?"
                                        FontSize="14" 
-                                       FontFamily="{StaticResource BrutalType}" Foreground="#99FFFFFF" 
+                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontWeight="Medium"
+                                       Foreground="#99FFFFFF" 
                                        />
 
                             <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
@@ -217,7 +236,8 @@
                                        Foreground="White"
                                        TextAlignment="Center"
                                        FontSize="14" 
-                                       FontFamily="{StaticResource BrutalType}" 
+                                       FontFamily="{StaticResource Segmdl2}"
+                                       FontWeight="Normal" 
                                        />
 
                         </StackPanel>

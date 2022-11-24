@@ -127,6 +127,7 @@
     <Resource Include="Fonts\BrutalType-Medium.ttf" />
     <Resource Include="Fonts\BrutalType-Thin.ttf" />
     <Resource Include="Fonts\BrutalType.ttf" />
+    <Resource Include="Fonts\segmdl2.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +194,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
