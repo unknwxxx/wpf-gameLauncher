@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace launcher_master.View.Pages
 {
-    public partial class SignInPage : Page
+    public partial class TypeOfSignIn : Page
     {
-        public SignInPage()
+        public TypeOfSignIn()
         {
             InitializeComponent();
         }

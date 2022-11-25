@@ -31,7 +31,7 @@ namespace launcher_master.View.Pages
         {
            if(Application.Current.MainWindow != null)
             {
-                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\SignInPage.xaml", UriKind.RelativeOrAbsolute));
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\TypeOfSignIn.xaml", UriKind.RelativeOrAbsolute));
                 
             }
             _dispatcherTimer.Stop();

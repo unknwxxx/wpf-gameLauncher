@@ -5,16 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:launcher_master.View.Pages" xmlns:viewModel="clr-namespace:launcher_master.ViewModels" xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
       mc:Ignorable="d" 
-      d:DesignHeight="540" d:DesignWidth="1040">
+      d:DesignHeight="580" d:DesignWidth="1040">
 
     <Page.Resources>
         <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
     </Page.Resources>
-
     <Page.DataContext>
         <viewModel:LoginViewModel IsViewVisible="True"></viewModel:LoginViewModel>
     </Page.DataContext>
-
     <Page.Visibility>
         <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
     </Page.Visibility>
@@ -23,7 +21,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         
         <Button Grid.Row="2" Width="19" 
@@ -40,9 +38,9 @@
             </Button.Background>
         </Button>
 
-        <ScrollViewer x:Name="Scroll" Grid.Row="1"  Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
 
-            <Border x:Name="Background" Grid.Row="1" Width="430" Height="640" RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border x:Name="Background" Grid.Row="1" Margin="0, 20, 0, 20"  Width="430" Height="640" RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
 
                 <StackPanel Width="430" Height="640" VerticalAlignment="Center" HorizontalAlignment="Center">
 

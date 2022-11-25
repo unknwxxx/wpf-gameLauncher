@@ -11,13 +11,15 @@
                 <ResourceDictionary Source="/ResourcesDictionary/ScrollBar.xaml"/>
                 <ResourceDictionary Source="/ResourcesDictionary/TextBoxes.xaml"/>
                 <ResourceDictionary Source="/ResourcesDictionary/ButtonsStyle.xaml"/>
-				<ResourceDictionary Source="/ResourcesDictionary/Colors.xaml"/>
-	            <ResourceDictionary Source="/ResourcesDictionary/Fonts.xaml"/>
-			 <ResourceDictionary Source="/ResourcesDictionary/Window.xaml"/>
-	        <ResourceDictionary Source="/ResourcesDictionary/ProgressBarStyle.xaml"/>
+                <ResourceDictionary Source="/ResourcesDictionary/Colors.xaml"/>
+                <ResourceDictionary Source="/ResourcesDictionary/Fonts.xaml"/>
+                <ResourceDictionary Source="/ResourcesDictionary/Window.xaml"/>
+                <ResourceDictionary Source="/ResourcesDictionary/ProgressBarStyle.xaml"/>
+                <ResourceDictionary Source="/ResourcesDictionary/Icons.xaml"/>
+				<ResourceDictionary Source="/ResourcesDictionary/IconsStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-    
+
 
 </Application>
