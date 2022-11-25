@@ -44,6 +44,7 @@
                     <StackPanel Margin="0, 166, 0, 0">
 
                         <AttachedProperties:LoginServiceButtons
+                            Click="SignInDragGames_OnClick"
                         Content="SIGN IN WITH DRAG GAMES"
                         IconHeight="25"
                         IconWidth="22"
@@ -117,23 +118,32 @@
                             <Hyperlink Foreground="White"
                                            FontWeight="Bold"
                                            TextDecorations="None"
-                                           Click="SignInLater_Click">
+                                           Click="SignInLater_OnClick">
                                            Sign In Later
                                     </Hyperlink>
-
                         </TextBlock>
-
-
                     </StackPanel>
-                    <Button Content="{StaticResource SettingsIcon}"
-                            FontSize="14"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Bottom"
-                            Margin="39,0, 0, 35">
-
-                    </Button>
                 </Grid>
             </Border>
         </ScrollViewer>
+
+        <Button Grid.Row="2"
+                Content="{StaticResource SettingsIcon}"
+                FontSize="14"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="15,0, 0, 0">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#FFD0C391"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+        </Button>
     </Grid>
 </Page>

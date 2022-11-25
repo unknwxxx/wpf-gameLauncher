@@ -22,7 +22,14 @@ namespace launcher_master.View.Pages
             InitializeComponent();
         }
 
-        private void SignInLater_Click(object sender, RoutedEventArgs e)
+        private void SignInDragGames_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow != null)
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\SignInPage.xaml",
+                    UriKind.RelativeOrAbsolute));
+        }
+
+        private void SignInLater_OnClick(object sender, RoutedEventArgs e)
         {
             if (Application.Current.MainWindow != null)
                 ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\PreparingToLaunch.xaml", 
