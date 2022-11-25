@@ -5,6 +5,7 @@
         <Setter Property="Stretch" Value="Uniform"/>
         <Setter Property="Fill" Value="{StaticResource IconActiveBrush}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style x:Key="DragGamesLogoStyle" TargetType="{x:Type Path}" BasedOn="{StaticResource {x:Type Path}}">

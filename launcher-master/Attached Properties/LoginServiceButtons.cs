@@ -24,6 +24,7 @@ namespace launcher_master.Attached_Properties
 
 
 
+
         public ImageSource ImageIcon
         {
             get => (ImageSource)GetValue(ImageIconProperty);
@@ -44,7 +45,6 @@ namespace launcher_master.Attached_Properties
         // Using a DependencyProperty as the backing store for IconHeight.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IconHeightProperty =
             DependencyProperty.Register("IconHeight", typeof(double), typeof(LoginServiceButtons));
-
 
 
         public double IconWidth
@@ -104,7 +104,6 @@ namespace launcher_master.Attached_Properties
         // Using a DependencyProperty as the backing store for IconBackgroundHover.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IconBackgroundHoverProperty =
             DependencyProperty.Register("IconBackgroundHover", typeof(Brush), typeof(LoginServiceButtons));
-
 
     }
 }

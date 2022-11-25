@@ -15,18 +15,14 @@ using System.Windows.Shapes;
 
 namespace launcher_master.View.Pages
 {
-    public partial class TypeOfSignIn : Page
+    /// <summary>
+    /// Логика взаимодействия для PreparingToLaunch.xaml
+    /// </summary>
+    public partial class PreparingToLaunch : Page
     {
-        public TypeOfSignIn()
+        public PreparingToLaunch()
         {
             InitializeComponent();
-        }
-
-        private void SignInLater_Click(object sender, RoutedEventArgs e)
-        {
-            if (Application.Current.MainWindow != null)
-                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\PreparingToLaunch.xaml", 
-                    UriKind.RelativeOrAbsolute));
         }
     }
 }

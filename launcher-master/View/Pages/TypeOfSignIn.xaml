@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="580" d:DesignWidth="1040"
       Title="TypeOfSignIn">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -19,7 +19,7 @@
         <ScrollViewer x:Name="Scroll" Grid.Row="1" Margin="3" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
             <Border 
                 Margin="0, 20, 0, 20"
-                MinHeight="745"
+                MinHeight="640"
                 MinWidth="430"
                 Background="{StaticResource SearchBackgroundBrush}"
                 HorizontalAlignment="Center"
@@ -42,10 +42,97 @@
                                />
 
                     <StackPanel Margin="0, 166, 0, 0">
-                        <AttachedProperties:LoginServiceButtons/>
-                    </StackPanel>
-                </Grid>
 
+                        <AttachedProperties:LoginServiceButtons
+                        Content="SIGN IN WITH DRAG GAMES"
+                        IconHeight="25"
+                        IconWidth="22"
+                        IconBackground="{StaticResource EpicBackBrush}"
+                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
+                        IconFill="{StaticResource SignInIconsBackBrush}"/>
+
+                        <AttachedProperties:LoginServiceButtons
+                        Content="SIGN IN WITH FACEBOOK"
+                        IconHeight="25"
+                        IconWidth="22"
+                        Icon="{StaticResource FBIcon}"
+                        IconBackground="{StaticResource FBBackBrush}"
+                        IconBackgroundHover="{StaticResource FBBackHoverBrush}"
+                        IconFill="{StaticResource SignInIconsBackBrush}"/>
+
+                        <AttachedProperties:LoginServiceButtons
+                        IconHeight="19"
+                        IconWidth="19"
+                        ImageIcon="{DynamicResource GoogleImage}"
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        IconBackground="{DynamicResource GoogleBackBrush}"
+                        IconBackgroundHover="{DynamicResource GoogleBackHoverBrush}"
+                        Content="SIGN IN WITH GOOGLE"/>
+
+                        <AttachedProperties:LoginServiceButtons
+                        IconHeight="23"
+                        IconWidth="23"
+                        Icon="{StaticResource PSIcon}"
+                        IconBackground="{DynamicResource PSBackBrush}"
+                        IconBackgroundHover="{DynamicResource PSBackHoverBrush}"
+                        IconFill="{DynamicResource SignInIconsBackBrush}"
+                        Content="SIGN IN WITH PLAYSTATION&#xD;&#xA;NETWORK"/>
+
+                        <AttachedProperties:LoginServiceButtons
+                        IconHeight="15"
+                        IconWidth="15"
+                        Icon="{StaticResource AppleIcon}"
+                        IconBackground="{DynamicResource AppleBackBrush}"
+                        IconBackgroundHover="{DynamicResource AppleBackHoverBrush}"
+                        IconFill="{DynamicResource AppleIconBrush}"
+                        Content="SIGN IN WITH APPLE"/>
+
+                        <AttachedProperties:LoginServiceButtons
+                        IconHeight="21"
+                        IconWidth="21"
+                        Icon="{StaticResource SteamIcon}"
+                        IconBackground="{DynamicResource SteamBackBrush}"
+                        IconBackgroundHover="{DynamicResource SteamBackHoverBrush}"
+                        IconFill="{DynamicResource SignInIconsBackBrush}"
+                        Content="SIGN IN WITH STEAM"/>
+
+                        <TextBlock Foreground="White"
+                                   FontFamily="Brutal Type"
+                                   FontSize="14"
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="0, 12"
+                                   LineHeight="20"
+                                   >
+                                <Run Text="Don`t have an Drag Games account?"/>
+                                <Hyperlink Foreground="White"
+                                           FontWeight="Bold"
+                                           TextDecorations="None">
+                                           Sign Up
+                                    </Hyperlink>
+                            
+                                <Run Text="or"/>
+                            <LineBreak/>
+                            
+                            <Hyperlink Foreground="White"
+                                           FontWeight="Bold"
+                                           TextDecorations="None"
+                                           Click="SignInLater_Click">
+                                           Sign In Later
+                                    </Hyperlink>
+
+                        </TextBlock>
+
+
+                    </StackPanel>
+                    <Button Content="{StaticResource SettingsIcon}"
+                            FontSize="14"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            Margin="39,0, 0, 35">
+
+                    </Button>
+                </Grid>
             </Border>
         </ScrollViewer>
     </Grid>
