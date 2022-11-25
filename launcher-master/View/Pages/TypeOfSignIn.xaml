@@ -13,101 +13,123 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="Scroll" Grid.Row="1" Margin="3" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
             <Border 
                 Margin="0, 20, 0, 20"
-                MinHeight="640"
-                MinWidth="430"
+                MinHeight="700"
+                MinWidth="450"
                 Background="{StaticResource SearchBackgroundBrush}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 CornerRadius="6">
                 <Grid>
+                    
                     <Path Data="{StaticResource EpicIcon}"
                           Width="43"
                           Margin="0, 50, 3 , 0"
                           Style="{StaticResource DragGamesLogoStyle}"/>
-
-                    <TextBlock Text="CHOOSE HOT TO SIGN IN TO YOUR DRAG ACCOUNT"
+                    
+                    <TextBlock Text="Sign In"
                                FontFamily="Brutal Type"
                                FontWeight="Bold"
-                               FontSize="12"
+                               FontSize="18"
                                Foreground="{StaticResource CaptionFontBrush}"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="0, 131, 0, 0"
+                               Margin="0, 130, 0, 0"
                                />
-
-                    <StackPanel Margin="0, 166, 0, 0">
+                    <StackPanel Margin="0, 175, 0, 0">
 
                         <AttachedProperties:LoginServiceButtons
-                            Click="SignInDragGames_OnClick"
-                        Content="SIGN IN WITH DRAG GAMES"
+                        Click="SignInDragGames_OnClick"
+                        Content="Sign in with DragGames"
+                        FontWeight="Bold"
                         IconHeight="25"
                         IconWidth="22"
                         IconBackground="{StaticResource EpicBackBrush}"
                         IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
-
                         <AttachedProperties:LoginServiceButtons
-                        Content="SIGN IN WITH FACEBOOK"
+                        Content="Sign in with facebook"
+                        FontWeight="Bold"
                         IconHeight="25"
                         IconWidth="22"
                         Icon="{StaticResource FBIcon}"
                         IconBackground="{StaticResource FBBackBrush}"
                         IconBackgroundHover="{StaticResource FBBackHoverBrush}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
-
                         <AttachedProperties:LoginServiceButtons
+                         Content="Sign in with Google"
+                        FontWeight="Bold"
                         IconHeight="19"
                         IconWidth="19"
                         ImageIcon="{DynamicResource GoogleImage}"
                         RenderOptions.BitmapScalingMode="HighQuality"
                         IconBackground="{DynamicResource GoogleBackBrush}"
                         IconBackgroundHover="{DynamicResource GoogleBackHoverBrush}"
-                        Content="SIGN IN WITH GOOGLE"/>
-
+                        />
                         <AttachedProperties:LoginServiceButtons
                         IconHeight="23"
                         IconWidth="23"
+                        Content="Sign in with account for PlayStation&#xD;&#xA;Network"
+                        FontWeight="Bold"
                         Icon="{StaticResource PSIcon}"
                         IconBackground="{DynamicResource PSBackBrush}"
                         IconBackgroundHover="{DynamicResource PSBackHoverBrush}"
                         IconFill="{DynamicResource SignInIconsBackBrush}"
-                        Content="SIGN IN WITH PLAYSTATION&#xD;&#xA;NETWORK"/>
-
+                        />
                         <AttachedProperties:LoginServiceButtons
                         IconHeight="15"
                         IconWidth="15"
+                        Content="Sign in with Apple"
+                        FontWeight="Bold"
                         Icon="{StaticResource AppleIcon}"
                         IconBackground="{DynamicResource AppleBackBrush}"
                         IconBackgroundHover="{DynamicResource AppleBackHoverBrush}"
                         IconFill="{DynamicResource AppleIconBrush}"
-                        Content="SIGN IN WITH APPLE"/>
-
+                        />
                         <AttachedProperties:LoginServiceButtons
+                        IconHeight="19"
+                        IconWidth="19"
+                        FontWeight="Bold"
+                        Icon="{StaticResource XBoxIcon}"
+                        IconBackground="{DynamicResource XBoxBackBrush}"
+                        IconBackgroundHover="{DynamicResource XBoxBackHoverBrush}"
+                        IconFill="{DynamicResource SignInIconsBackBrush}"
+                        Content="Sign in with Xbox Live"/>
+                        <AttachedProperties:LoginServiceButtons
+                        IconHeight="40"
+                        IconWidth="65"
+                        FontWeight="Bold"
+                        Icon="{StaticResource NintendoIcon}"
+                        IconBackground="{DynamicResource NintendoBackBrush}"
+                        IconBackgroundHover="{DynamicResource NintendoBackHoverBrush}"
+                        IconFill="{DynamicResource SignInIconsBackBrush}"
+                        Content="Sign in with Nintendo Account"/>
+                        <AttachedProperties:LoginServiceButtons
+                        Content="Sign in with Steam"
                         IconHeight="21"
                         IconWidth="21"
+                        FontWeight="Bold"
                         Icon="{StaticResource SteamIcon}"
                         IconBackground="{DynamicResource SteamBackBrush}"
                         IconBackgroundHover="{DynamicResource SteamBackHoverBrush}"
                         IconFill="{DynamicResource SignInIconsBackBrush}"
-                        Content="SIGN IN WITH STEAM"/>
+                        />
 
-                        <TextBlock Foreground="White"
+                        <TextBlock Foreground="#99FFFFFF"
                                    FontFamily="Brutal Type"
+                                   FontWeight="Medium"
                                    FontSize="14"
                                    TextAlignment="Center"
                                    HorizontalAlignment="Center"
                                    Margin="0, 12"
-                                   LineHeight="20"
-                                   >
+                                   LineHeight="20">
                                 <Run Text="Don`t have an Drag Games account?"/>
                                 <Hyperlink Foreground="White"
-                                           FontWeight="Bold"
+                                           FontWeight="Medium"
                                            TextDecorations="None">
                                            Sign Up
                                     </Hyperlink>
@@ -131,14 +153,15 @@
                 Content="{StaticResource SettingsIcon}"
                 FontSize="14"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Margin="15,0, 0, 0">
+                VerticalAlignment="Bottom"
+                RenderOptions.BitmapScalingMode="HighQuality"
+                Margin="35,0, 0, 30">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="#FFD0C391"/>
+                            <Setter Property="Foreground" Value="{StaticResource SettingsIconHoverBrush}"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>
