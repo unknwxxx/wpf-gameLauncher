@@ -21,5 +21,20 @@ namespace launcher_master.View.Pages
         {
             InitializeComponent();
         }
+
+        private void Setting_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow != null)
+            {
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\SettingsPage.xaml", UriKind.RelativeOrAbsolute));
+            }
+        }
+        private void TypeOfSignIn_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow != null)
+            {
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\LoadingPage.xaml", UriKind.RelativeOrAbsolute));
+            }
+        }
     }
 }

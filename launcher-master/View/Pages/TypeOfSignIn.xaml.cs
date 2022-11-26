@@ -25,7 +25,7 @@ namespace launcher_master.View.Pages
         private void SignInDragGames_OnClick(object sender, RoutedEventArgs e)
         {
             if (Application.Current.MainWindow != null)
-                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\SignInPage.xaml",
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\PreparingToLaunch.xaml",
                     UriKind.RelativeOrAbsolute));
         }
 
@@ -34,6 +34,15 @@ namespace launcher_master.View.Pages
             if (Application.Current.MainWindow != null)
                 ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\PreparingToLaunch.xaml", 
                     UriKind.RelativeOrAbsolute));
+        }
+
+        private void Setting_OnClick(object sender, RoutedEventArgs e)
+        {
+
+            if (Application.Current.MainWindow != null)
+            {
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\SettingsPage.xaml", UriKind.RelativeOrAbsolute));
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
     <SolidColorBrush x:Key="TextBox.Focus.Border" Color="White"/>
 
     <Style x:Key="PasswordBoxStyle" TargetType="{x:Type PasswordBox}">
-        <Setter Property="FontFamily" Value="{StaticResource BrutalType}"/>
+        <Setter Property="FontFamily" Value="Brutal Type"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="11"/>
         <Setter Property="Background" Value="{x:Null}"/>
@@ -51,7 +51,7 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
-        <Setter Property="FontFamily" Value="{StaticResource BrutalType}"/>
+        <Setter Property="FontFamily" Value="Brutal Type"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Background" Value="{x:Null}"/>

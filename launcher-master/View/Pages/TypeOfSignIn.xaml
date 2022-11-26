@@ -17,20 +17,14 @@
 
         <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
             <Border 
-                Margin="0, 20, 0, 20"
+                Margin="0, 50, 0, 50"
                 MinHeight="700"
-                MinWidth="450"
-                Background="{StaticResource SearchBackgroundBrush}"
+                MinWidth="460"
+                Background="#212121"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 CornerRadius="6">
                 <Grid>
-                    
-                    <Path Data="{StaticResource EpicIcon}"
-                          Width="43"
-                          Margin="0, 50, 3 , 0"
-                          Style="{StaticResource DragGamesLogoStyle}"/>
-                    
                     <TextBlock Text="Sign In"
                                FontFamily="Brutal Type"
                                FontWeight="Bold"
@@ -38,7 +32,7 @@
                                Foreground="{StaticResource CaptionFontBrush}"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="0, 130, 0, 0"
+                               Margin="0, 100, 0, 0"
                                />
                     <StackPanel Margin="0, 175, 0, 0">
 
@@ -47,77 +41,24 @@
                         Content="Sign in with DragGames"
                         FontWeight="Bold"
                         IconHeight="25"
-                        IconWidth="22"
+                        IconWidth="25"
                         IconBackground="{StaticResource EpicBackBrush}"
                         IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
                         <AttachedProperties:LoginServiceButtons
-                        Content="Sign in with facebook"
                         FontWeight="Bold"
                         IconHeight="25"
-                        IconWidth="22"
-                        Icon="{StaticResource FBIcon}"
-                        IconBackground="{StaticResource FBBackBrush}"
-                        IconBackgroundHover="{StaticResource FBBackHoverBrush}"
+                        IconWidth="25"
+                        IconBackground="{StaticResource EpicBackBrush}"
+                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
                         <AttachedProperties:LoginServiceButtons
-                         Content="Sign in with Google"
                         FontWeight="Bold"
-                        IconHeight="19"
-                        IconWidth="19"
-                        ImageIcon="{DynamicResource GoogleImage}"
-                        RenderOptions.BitmapScalingMode="HighQuality"
-                        IconBackground="{DynamicResource GoogleBackBrush}"
-                        IconBackgroundHover="{DynamicResource GoogleBackHoverBrush}"
-                        />
-                        <AttachedProperties:LoginServiceButtons
-                        IconHeight="23"
-                        IconWidth="23"
-                        Content="Sign in with account for PlayStation&#xD;&#xA;Network"
-                        FontWeight="Bold"
-                        Icon="{StaticResource PSIcon}"
-                        IconBackground="{DynamicResource PSBackBrush}"
-                        IconBackgroundHover="{DynamicResource PSBackHoverBrush}"
-                        IconFill="{DynamicResource SignInIconsBackBrush}"
-                        />
-                        <AttachedProperties:LoginServiceButtons
-                        IconHeight="15"
-                        IconWidth="15"
-                        Content="Sign in with Apple"
-                        FontWeight="Bold"
-                        Icon="{StaticResource AppleIcon}"
-                        IconBackground="{DynamicResource AppleBackBrush}"
-                        IconBackgroundHover="{DynamicResource AppleBackHoverBrush}"
-                        IconFill="{DynamicResource AppleIconBrush}"
-                        />
-                        <AttachedProperties:LoginServiceButtons
-                        IconHeight="19"
-                        IconWidth="19"
-                        FontWeight="Bold"
-                        Icon="{StaticResource XBoxIcon}"
-                        IconBackground="{DynamicResource XBoxBackBrush}"
-                        IconBackgroundHover="{DynamicResource XBoxBackHoverBrush}"
-                        IconFill="{DynamicResource SignInIconsBackBrush}"
-                        Content="Sign in with Xbox Live"/>
-                        <AttachedProperties:LoginServiceButtons
-                        IconHeight="40"
-                        IconWidth="65"
-                        FontWeight="Bold"
-                        Icon="{StaticResource NintendoIcon}"
-                        IconBackground="{DynamicResource NintendoBackBrush}"
-                        IconBackgroundHover="{DynamicResource NintendoBackHoverBrush}"
-                        IconFill="{DynamicResource SignInIconsBackBrush}"
-                        Content="Sign in with Nintendo Account"/>
-                        <AttachedProperties:LoginServiceButtons
-                        Content="Sign in with Steam"
-                        IconHeight="21"
-                        IconWidth="21"
-                        FontWeight="Bold"
-                        Icon="{StaticResource SteamIcon}"
-                        IconBackground="{DynamicResource SteamBackBrush}"
-                        IconBackgroundHover="{DynamicResource SteamBackHoverBrush}"
-                        IconFill="{DynamicResource SignInIconsBackBrush}"
-                        />
+                        IconHeight="25"
+                        IconWidth="25"
+                        IconBackground="{StaticResource EpicBackBrush}"
+                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
+                        IconFill="{StaticResource SignInIconsBackBrush}"/>
 
                         <TextBlock Foreground="#99FFFFFF"
                                    FontFamily="Brutal Type"
@@ -129,8 +70,8 @@
                                    LineHeight="20">
                                 <Run Text="Don`t have an Drag Games account?"/>
                                 <Hyperlink Foreground="White"
-                                           FontWeight="Medium"
-                                           TextDecorations="None">
+                                           FontWeight="Normal"
+                                           TextDecorations="Underline">
                                            Sign Up
                                     </Hyperlink>
                             
@@ -138,8 +79,8 @@
                             <LineBreak/>
                             
                             <Hyperlink Foreground="White"
-                                           FontWeight="Bold"
-                                           TextDecorations="None"
+                                           FontWeight="Normal"
+                                           TextDecorations="Underline"
                                            Click="SignInLater_OnClick">
                                            Sign In Later
                                     </Hyperlink>
@@ -150,6 +91,7 @@
         </ScrollViewer>
 
         <Button Grid.Row="2"
+                Click="Setting_OnClick"
                 Content="{StaticResource SettingsIcon}"
                 FontSize="14"
                 HorizontalAlignment="Left"
@@ -161,7 +103,7 @@
                 <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource SettingsIconHoverBrush}"/>
+                            <Setter Property="Foreground" Value="#FFEEDC99"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>

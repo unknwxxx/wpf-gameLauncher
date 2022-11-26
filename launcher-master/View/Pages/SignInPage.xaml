@@ -25,14 +25,16 @@
 
         <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
 
-            <Border x:Name="Background" Grid.Row="1" Margin="0, 50, 0, 50" Width="460" Height="670" RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" Background="#202020" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border x:Name="Background" Grid.Row="1" Margin="0, 50, 0, 50" Width="460" Height="700" 
+                    RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" 
+                    Background="#212121" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                <StackPanel Width="460" Height="670" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Width="460" Height="700" VerticalAlignment="Center" HorizontalAlignment="Center">
 
                     <TextBlock     Width="320"  
                                    FontSize="17" 
                                    Margin="0, 100, 0, 50" 
-                                   Text="Sign in with an Epic Games account."
+                                   Text="Sign in with an Drag Games account."
                                    Foreground="White"
                                    TextAlignment="Center" 
                                    TextDecorations="{x:Null}" 
@@ -66,8 +68,8 @@
                                HorizontalAlignment="Center" 
                                Margin="0, 10, 0, 10"
                                Foreground="#FFFF2121"/>
-                    
-                    
+
+
 
                     <Grid Width="350" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -109,12 +111,12 @@
                                        FontSize="14"/>
                     </Grid>
 
-                    <Button     Width="340" 
+                    <Button     Width="350" 
                                 Height="60"
                                 Style="{ StaticResource RoundedButtonStyle}" 
                                 Command="{Binding LoginCommand}" 
                                 FontFamily="Brutal type"
-                                Margin="0,35,0,0" 
+                                Margin="0,30,0,0" 
                                 Content="Log in now" 
                                 FontSize="14" 
                                 FontWeight="Medium" 
@@ -122,7 +124,7 @@
                                 VerticalAlignment="Center"/>
 
                     <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
-                            Margin="0, 25, 0, 30"
+                            Margin="0, 40, 0, 20"
                             Width="340" 
                             Text="Privacy Policy"  
                             FontSize="14" 
@@ -172,13 +174,38 @@
                         
                         <Hyperlink Foreground="White"
                                            FontWeight="Normal"
-                                           TextDecorations="Underline">
+                                           TextDecorations="Underline"
+                                           Click="TypeOfSignIn_OnClick">
                                            all sign in options
                                     </Hyperlink>
                     </TextBlock>
                 </StackPanel>
             </Border>
         </ScrollViewer>
+
+        <Button Grid.Row="2"
+                Click="Setting_OnClick"
+                Content="{StaticResource SettingsIcon}"
+                FontSize="14"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                RenderOptions.BitmapScalingMode="HighQuality"
+                Margin="35,0, 0, 30">
+            
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#FFEEDC99"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+        </Button>
+
+
+
     </Grid>
 
 

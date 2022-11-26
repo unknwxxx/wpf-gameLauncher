@@ -79,6 +79,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Attached Properties\LoginServiceButtons.cs" />
+    <Compile Include="Converters\ArcEndPointConverter.cs" />
+    <Compile Include="Converters\ArcSizeConverter.cs" />
+    <Compile Include="Converters\LocalEx.cs" />
+    <Compile Include="Converters\NotZeroConverter.cs" />
+    <Compile Include="Converters\PositiveToNegativeConverter.cs" />
+    <Compile Include="Converters\RotateTransformCentreConverter.cs" />
+    <Compile Include="Converters\StartPointConverter.cs" />
+    <Compile Include="Converters\TextToBoolConverter.cs" />
     <Compile Include="ResourcesDictionary\Window.cs" />
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -89,8 +97,14 @@
     <Compile Include="View\Pages\PreparingToLaunch.xaml.cs">
       <DependentUpon>PreparingToLaunch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\TypeOfSignIn.xaml.cs">
       <DependentUpon>TypeOfSignIn.xaml</DependentUpon>
@@ -187,7 +201,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\StorePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
