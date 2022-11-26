@@ -55,7 +55,7 @@
     <SolidColorBrush x:Key="ProgressBar.Background" Color="#FFE6E6E6"/>
 
     <!--ProgressBar Progress Brush-->
-    <SolidColorBrush x:Key="ProgressBar.Progress" Color="#FF1C61F3"/>
+    <SolidColorBrush x:Key="ProgressBar.Progress" Color="#212121"/>
 
     <!--ProgressBar Stripe Brush-->
     <SolidColorBrush x:Key="ProgressBar.Stripe" Color="#33FFFFFF"/>
