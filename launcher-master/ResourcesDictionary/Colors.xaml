@@ -9,6 +9,18 @@
     <Color x:Key="InactiveWindowColor">#414141</Color>
     <SolidColorBrush x:Key="InactiveWindowBrush" Color="{StaticResource InactiveWindowColor}" />
 
+    <!-- Button Color -->
+    <Color x:Key="ButtonColor">#FFEEDC99</Color>
+    <SolidColorBrush x:Key="ButtonBrush" Color="{StaticResource ButtonColor}" />
+
+    <!-- Hover Button Color -->
+    <Color x:Key="HoverButtonColor">#FFFFEEAD</Color>
+    <SolidColorBrush x:Key="HoverButtonBrush" Color="{StaticResource HoverButtonColor}" />
+
+    <!-- Pressed Button Color -->
+    <Color x:Key="PressedButtonColor">#FFC9BB85</Color>
+    <SolidColorBrush x:Key="PressedButtonBrush" Color="{StaticResource PressedButtonColor}" />
+
     <!-- Inactive Window Button Color -->
     <Color x:Key="InactiveWindowButtonColor">#838383</Color>
     <SolidColorBrush x:Key="InactiveWindowButtonBrush" Color="{StaticResource InactiveWindowButtonColor}" />
@@ -72,27 +84,10 @@
     <Color x:Key="BlueAccentColor">#006FCD</Color>
     <SolidColorBrush x:Key="BlueAccentBrush" Color="{StaticResource BlueAccentColor}"/>
 
-    <!--#region Sign In Page Brushes-->
-    <!--SignIn Button Background Color-->
-    <Color x:Key="SignInBackgroundColor">#2B2B2B</Color>
-    <SolidColorBrush x:Key="SignInBackgroundBrush" Color="{StaticResource SignInBackgroundColor}"/>
-
-    <!--SignIn Button Hover Background Color-->
-    <Color x:Key="SignInBackgroundMouseOverColor">#363636</Color>
-    <SolidColorBrush x:Key="SignInBackgroundMouseOverBrush" Color="{StaticResource SignInBackgroundMouseOverColor}"/>
-
     <!--#region Icon Brushes-->
     <!--SignIn Page Icon Fill Color-->
     <Color x:Key="SignInIconsColor">#FFFFFF</Color>
     <SolidColorBrush x:Key="SignInIconsBackBrush" Color="{StaticResource SignInIconsColor}"/>
-
-    <!--Epic Icon Background Color-->
-    <Color x:Key="EpicBackColor">#353535</Color>
-    <SolidColorBrush x:Key="EpicBackBrush" Color="{StaticResource EpicBackColor}"/>
-
-    <!--Epic Icon Hover Background Color-->
-    <Color x:Key="EpicBackHoverColor">#3E3D3D</Color>
-    <SolidColorBrush x:Key="EpicBackHoverBrush" Color="{StaticResource EpicBackHoverColor}"/>
 
     <!--Facebook Icon Background Color-->
     <Color x:Key="FBBackColor">#3261A3</Color>
@@ -122,6 +117,10 @@
     <!--XBox Icon Background Color-->
     <Color x:Key="XBoxBackColor">#027D00</Color>
     <SolidColorBrush x:Key="XBoxBackBrush" Color="{StaticResource XBoxBackColor}"/>
+
+    <!--Telegram Icon Background Color-->
+    <Color x:Key="TelegramBackColor">#128ad8</Color>
+    <SolidColorBrush x:Key="TelegramBackBrush" Color="{StaticResource TelegramBackColor}"/>
 
     <!--XBox Icon Hover Background Color-->
     <Color x:Key="XBoxBackHoverColor">#0B8F08</Color>

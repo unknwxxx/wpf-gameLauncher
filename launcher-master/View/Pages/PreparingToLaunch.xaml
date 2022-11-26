@@ -12,7 +12,7 @@
         <Grid
             x:Name="MainGrid"
             Height="200"
-            Width="350"
+            Width="370"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Background="#212121"
@@ -41,10 +41,8 @@
                     FontSize="14"
                     Foreground="{StaticResource CaptionFontBrush}"
                     TextAlignment="Center"
-                    Text="Preparing the drag games launcher"/>
+                    Text="Preparing the Launcher..."/>
             </StackPanel>
-
         </Grid>
-
     </Grid>
 </Page>

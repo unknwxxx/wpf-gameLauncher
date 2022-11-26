@@ -18,7 +18,7 @@ namespace launcher_master.View.Pages
 
         private void _dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            MainGrid.Height = 220;
+            MainGrid.Height += 50;
             ProgressBar.Visibility = Visibility.Visible;
 
             _dispatcherTimer.Tick += _dispatcherTimer_Tick1;

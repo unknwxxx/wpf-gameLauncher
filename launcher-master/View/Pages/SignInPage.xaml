@@ -11,7 +11,7 @@
         <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:LoginViewModel IsViewVisible="True"></viewModel:LoginViewModel>
+        <viewModel:LoginViewModel></viewModel:LoginViewModel>
     </Page.DataContext>
     <Page.Visibility>
         <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
@@ -25,11 +25,15 @@
 
         <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
 
-            <Border x:Name="Background" Grid.Row="1" Margin="0, 50, 0, 50" Width="460" Height="700" 
+            <Border x:Name="Background" Grid.Row="1" 
+                    Margin="0, 25, 0, 50" 
+                    Width="460" Height="650" 
                     RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" 
-                    Background="#212121" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    Background="#212121" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                <StackPanel Width="460" Height="700" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Width="460" Height="650" 
+                            VerticalAlignment="Center" HorizontalAlignment="Center">
 
                     <TextBlock     Width="320"  
                                    FontSize="17" 
@@ -50,25 +54,37 @@
                                  Padding="15, 0, 0, 0" 
                                  MaxLength="50" 
                                  MaxLines="50">
-
+                        
+                        
 
                     </TextBox>
 
-                    <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Margin="0, 35 , 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Margin="0, 40, 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
                                                                 Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
 
                     </сustomcontrols:BindablePasswordBox>
 
-                    <TextBlock Width="350"
+                    <TextBlock Name="TextBlockErrorMessage"
+                               Width="350"
                                FontSize="12" 
                                Text="{Binding ErrorMessage}" 
                                FontFamily="Brutal type" 
                                FontWeight="Normal" 
                                TextWrapping="Wrap" 
                                HorizontalAlignment="Center" 
-                               Margin="0, 10, 0, 10"
-                               Foreground="#FFFF2121"/>
-
+                               Foreground="#FFFF2121">
+                        
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=TextBlockErrorMessage, Path=Text}" Value="* Invalid Login or Password">
+                                        <Setter Property="Margin" Value="0, 20, 0, 20"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                        
+                    </TextBlock>
 
 
                     <Grid Width="350" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -81,7 +97,6 @@
 
                         <CheckBox Width="25"
                                       Grid.Column="0"
-                                      Style="{StaticResource CheckBoxStyle}"
                                       Height="25"
                                       Foreground="White"
                                       Background="#FF353535" 
@@ -89,51 +104,70 @@
                                       OpacityMask="White"
                                       ClickMode="Press"/>
 
-                        <TextBlock Style="{StaticResource ClickableTextBlock}"
-                                       Grid.Column="1"
-                                       Height="25" 
-                                       Padding="0, 5, 0, 0"
-                                       Margin="10, 0, 0, 0"
-                                       Foreground="#99FFFFFF" 
-                                       FontFamily="Brutal type"
-                                       FontWeight="Medium"
-                                       Text="Remember me" 
-                                       FontSize="14"/>
+                        <TextBlock Grid.Column="1"
+                                   Height="25" 
+                                   Padding="0, 5, 0, 0"
+                                   Margin="10, 0, 0, 0"
+                                   FontFamily="Brutal type"
+                                   HorizontalAlignment="Left"
+                                   FontSize="14"
+                                   >
+                                <Hyperlink Foreground="#99FFFFFF"
+                                           FontWeight="Medium"
+                                           TextDecorations="None">
+                                           Remember me
+                                    </Hyperlink>
+                        </TextBlock>
 
-                        <TextBlock Style="{StaticResource ClickableTextBlockUnderline}"
+                        <TextBlock     
                                        Padding="0, 5, 0, 0"
                                        Foreground="White"
                                        Grid.Column="2"
                                        HorizontalAlignment="Right"
                                        FontFamily="Brutal Type"
                                        FontWeight="Normal"
-                                       Text="Fargot your Password?"
-                                       FontSize="14"/>
+                                       FontSize="14">
+                                        
+                            <Hyperlink Foreground="White"
+                                           FontWeight="Normal"
+                                           TextDecorations="Underline">
+                                           Fargot your Password?
+                                    </Hyperlink>
+
+                        </TextBlock>
+
                     </Grid>
 
                     <Button     Width="350" 
                                 Height="60"
-                                Style="{ StaticResource RoundedButtonStyle}" 
+                                Style="{ StaticResource Rounded.Button}" 
                                 Command="{Binding LoginCommand}" 
                                 FontFamily="Brutal type"
-                                Margin="0,30,0,0" 
+                                Margin="0,20,0,0" 
                                 Content="Log in now" 
                                 FontSize="14" 
                                 FontWeight="Medium" 
                                 HorizontalAlignment="Center" 
-                                VerticalAlignment="Center"/>
+                                VerticalAlignment="Center">
 
-                    <TextBlock Style="{StaticResource ClickableTextBlockUnderline}" 
-                            Margin="0, 40, 0, 20"
-                            Width="340" 
-                            Text="Privacy Policy"  
-                            FontSize="14" 
-                            Foreground="#FFFFFFFF" 
-                            TextAlignment="Center" 
-                            FontFamily="Brutal type"
-                            FontWeight="Normal"
-                            HorizontalAlignment="Center" 
-                            VerticalAlignment="Center"/>
+                    </Button>
+
+                    <TextBlock     Margin="0, 20, 0, 20"
+                                   Foreground="#99FFFFFF"
+                                   Width="340"
+                                   FontFamily="Brutal Type"
+                                   FontWeight="Medium"
+                                   FontSize="14"
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   LineHeight="20">
+                                
+                                <Hyperlink Foreground="White"
+                                           FontWeight="Normal"
+                                           TextDecorations="Underline">
+                                           Privacy Policy
+                                    </Hyperlink>
+                    </TextBlock>
 
                     <TextBlock     Foreground="#99FFFFFF"
                                    Width="340"
@@ -191,9 +225,9 @@
                 VerticalAlignment="Bottom"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 Margin="35,0, 0, 30">
-            
+
             <Button.Style>
-                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnly.Button}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Foreground" Value="#FFEEDC99"/>

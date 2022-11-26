@@ -246,6 +246,8 @@
     <Resource Include="Images\fortnite.jpg" />
     <Resource Include="Images\googleicon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\telegram.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

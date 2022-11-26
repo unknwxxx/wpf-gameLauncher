@@ -11,6 +11,7 @@ namespace launcher_master.Attached_Properties
             get { return (PathGeometry)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
         }
+
         public ImageSource ImageIcon
         {
             get => (ImageSource)GetValue(ImageIconProperty);

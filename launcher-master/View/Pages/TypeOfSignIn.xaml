@@ -17,8 +17,8 @@
 
         <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
             <Border 
-                Margin="0, 50, 0, 50"
-                MinHeight="700"
+                Margin="0, 25, 0, 25"
+                MinHeight="600"
                 MinWidth="460"
                 Background="#212121"
                 HorizontalAlignment="Center"
@@ -39,25 +39,27 @@
                         <AttachedProperties:LoginServiceButtons
                         Click="SignInDragGames_OnClick"
                         Content="Sign in with DragGames"
-                        FontWeight="Bold"
                         IconHeight="25"
                         IconWidth="25"
-                        IconBackground="{StaticResource EpicBackBrush}"
-                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
+                        IconBackground="{x:Null}"
+                        IconBackgroundHover="{x:Null}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
+
                         <AttachedProperties:LoginServiceButtons
-                        FontWeight="Bold"
+                        Content="Sign in with Google"
                         IconHeight="25"
                         IconWidth="25"
-                        IconBackground="{StaticResource EpicBackBrush}"
-                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
-                        IconFill="{StaticResource SignInIconsBackBrush}"/>
+                        ImageIcon="{DynamicResource GoogleImage}"
+                        IconBackground="{DynamicResource GoogleBackBrush}"
+                        IconBackgroundHover="{DynamicResource GoogleBackHoverBrush}"/>
+
                         <AttachedProperties:LoginServiceButtons
-                        FontWeight="Bold"
+                        Content="Sign in with Telegram"
                         IconHeight="25"
                         IconWidth="25"
-                        IconBackground="{StaticResource EpicBackBrush}"
-                        IconBackgroundHover="{StaticResource EpicBackHoverBrush}"
+                        ImageIcon="{DynamicResource TelegramImage}"
+                        IconBackground="{StaticResource TelegramBackBrush}"
+                        IconBackgroundHover="{StaticResource TelegramBackBrush}"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
 
                         <TextBlock Foreground="#99FFFFFF"
@@ -100,7 +102,7 @@
                 Margin="35,0, 0, 30">
 
             <Button.Style>
-                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnlyButtonStyle}">
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnly.Button}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Foreground" Value="#FFEEDC99"/>

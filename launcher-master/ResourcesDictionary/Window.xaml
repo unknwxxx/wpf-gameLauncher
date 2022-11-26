@@ -4,7 +4,6 @@
 
     <Style TargetType="{x:Type Button}" x:Key="WindowChromeButtonStyle">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
-        <!--Allows our buttons to be clickable-->
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Width" Value="30"/>
         <Setter Property="Height" Value="22"/>
@@ -96,7 +95,6 @@
                             Margin="10,5"
                             Text="{TemplateBinding Title}"/>
 
-                        <!--#region Window Buttons-->
                         <StackPanel
                             HorizontalAlignment="Right"
                             Orientation="Horizontal"
@@ -123,10 +121,9 @@
                                 FontSize="11"
                                 Style="{StaticResource WindowChromeCloseButton}"/>
                         </StackPanel>
-                        <!--#endregion-->
 
                     </Grid>
-                    <!--#region Window Content-->
+                    
                     <Grid 
                         Name="MainGrid"
                         Grid.Row="1"
@@ -138,6 +135,7 @@
                 </Grid>
             </Border>
         </Grid>
+        
         <ControlTemplate.Triggers>
             <Trigger Property="WindowState" Value="Maximized">
                 <Setter TargetName="RootBorder" Property="BorderBrush" Value="Transparent"/>
@@ -146,6 +144,7 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    
     <Style TargetType="{x:Type Window}">
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
@@ -164,4 +163,5 @@
         </Setter>
         <Setter Property="Template" Value="{StaticResource WindowTemplate}"/>
     </Style>
+    
 </ResourceDictionary>
