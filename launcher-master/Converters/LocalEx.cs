@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace launcher_master.Converters
 {
@@ -13,11 +10,6 @@ namespace launcher_master.Converters
             var d = val as double? ?? double.NaN;
             return double.IsInfinity(d) ? double.NaN : d;
         }
-
-
-        public static bool AnyNan(this IEnumerable<double> vals)
-        {
-            return vals.Any(double.IsNaN);
-        }
+        public static bool AnyNan(this IEnumerable<double> vals) => vals.Any(double.IsNaN)
     }
 }
