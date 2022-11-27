@@ -64,10 +64,10 @@
     <SolidColorBrush x:Key="CaptionCloseButtonDownBrush" Color="{StaticResource CaptionCloseButtonDownColor}"/>
 
     <!--ProgressBar Background Brush-->
-    <SolidColorBrush x:Key="ProgressBar.Background" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="ProgressBar.Background" Color="#121212"/>
 
     <!--ProgressBar Progress Brush-->
-    <SolidColorBrush x:Key="ProgressBar.Progress" Color="#212121"/>
+    <SolidColorBrush x:Key="ProgressBar.Progress" Color="#141414"/>
 
     <!--ProgressBar Stripe Brush-->
     <SolidColorBrush x:Key="ProgressBar.Stripe" Color="#33FFFFFF"/>

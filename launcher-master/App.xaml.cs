@@ -15,15 +15,11 @@ namespace launcher_master
             MainView mainWindow = new MainView();
             mainWindow.Show();
 
-            //var LoginView = new LoginView();
-            //LoginView.Show();
-            //LoginView.IsVisibleChanged += (s, ev) =>
+            //mainWindow.IsVisibleChanged += (s, ev) =>
             //{
-            //    if (LoginView.IsVisible == false && LoginView.IsLoaded)
+            //    if (mainWindow.IsVisible == false && mainWindow.IsLoaded)
             //    {
-            //        MainView mainWindow = new MainView();
-            //        mainWindow.Show();
-            //        LoginView.Close();
+            //        ((MainView)Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\StorePage.xaml", UriKind.RelativeOrAbsolute));
             //    }
             //};
         }

@@ -25,15 +25,15 @@
                 VerticalAlignment="Center"
                 CornerRadius="6">
                 <Grid>
-                    <TextBlock Text="Sign In"
+                    <TextBlock Text="Sign in "
                                FontFamily="Brutal Type"
                                FontWeight="Bold"
                                FontSize="18"
                                Foreground="{StaticResource CaptionFontBrush}"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="0, 100, 0, 0"
-                               />
+                               Margin="0, 100, 0, 0"/>
+                    
                     <StackPanel Margin="0, 175, 0, 0">
 
                         <AttachedProperties:LoginServiceButtons
@@ -41,8 +41,8 @@
                         Content="Sign in with DragGames"
                         IconHeight="25"
                         IconWidth="25"
-                        IconBackground="{x:Null}"
-                        IconBackgroundHover="{x:Null}"
+                        IconBackground="#303030"
+                        IconBackgroundHover="#363636"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
 
                         <AttachedProperties:LoginServiceButtons
@@ -105,7 +105,7 @@
                 <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnly.Button}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="#FFEEDC99"/>
+                            <Setter Property="Foreground" Value="{StaticResource HoverButtonBrush}"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>

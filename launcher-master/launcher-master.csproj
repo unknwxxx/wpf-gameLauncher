@@ -78,7 +78,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Attached Properties\BasicMenuButton.cs" />
+    <Compile Include="Attached Properties\CheckableMenuButton.cs" />
     <Compile Include="Attached Properties\LoginServiceButtons.cs" />
+    <Compile Include="Attached Properties\SideNavigationMenu.cs" />
     <Compile Include="Converters\ArcEndPointConverter.cs" />
     <Compile Include="Converters\ArcSizeConverter.cs" />
     <Compile Include="Converters\LocalEx.cs" />
@@ -111,6 +114,9 @@
     </Compile>
     <Compile Include="СustomControls\BindablePasswordBox.xaml.cs">
       <DependentUpon>BindablePasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="СustomControls\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +166,10 @@
     <Page Include="ResourcesDictionary\Colors.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResourcesDictionary\ComboBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourcesDictionary\Fonts.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -220,6 +230,10 @@
     <Page Include="СustomControls\BindablePasswordBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="СustomControls\SearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
