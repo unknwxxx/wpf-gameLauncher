@@ -12,15 +12,16 @@ namespace launcher_master
     {
         protected void ApplicationStart(object sender, StartupEventArgs e)
         {
-            var LoginView = new LoginView();
-            LoginView.Show();
-            LoginView.IsVisibleChanged += (s, ev) =>
-            {
-                if (LoginView.IsVisible == false && LoginView.IsLoaded)
-                {
-                    LoginView.Close();
-                }
-            };
+            MainView mainWindow = new MainView();
+            mainWindow.Show();
+
+            //mainWindow.IsVisibleChanged += (s, ev) =>
+            //{
+            //    if (mainWindow.IsVisible == false && mainWindow.IsLoaded)
+            //    {
+            //        ((MainView)Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\StorePage.xaml", UriKind.RelativeOrAbsolute));
+            //    }
+            //};
         }
     }
 }

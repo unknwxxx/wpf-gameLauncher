@@ -78,8 +78,45 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Attached Properties\BasicMenuButton.cs" />
+    <Compile Include="Attached Properties\CheckableMenuButton.cs" />
+    <Compile Include="Attached Properties\LoginServiceButtons.cs" />
+    <Compile Include="Attached Properties\SideNavigationMenu.cs" />
+    <Compile Include="Converters\ArcEndPointConverter.cs" />
+    <Compile Include="Converters\ArcSizeConverter.cs" />
+    <Compile Include="Converters\LocalEx.cs" />
+    <Compile Include="Converters\NotZeroConverter.cs" />
+    <Compile Include="Converters\PositiveToNegativeConverter.cs" />
+    <Compile Include="Converters\RotateTransformCentreConverter.cs" />
+    <Compile Include="Converters\StartPointConverter.cs" />
+    <Compile Include="Converters\TextToBoolConverter.cs" />
+    <Compile Include="ResourcesDictionary\Window.cs" />
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\PreparingToLaunch.xaml.cs">
+      <DependentUpon>PreparingToLaunch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\TypeOfSignIn.xaml.cs">
+      <DependentUpon>TypeOfSignIn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="СustomControls\BindablePasswordBox.xaml.cs">
       <DependentUpon>BindablePasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="СustomControls\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +127,6 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelCommand.cs" />
-    <Compile Include="View\LoginView.xaml.cs">
-      <DependentUpon>LoginView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -110,38 +144,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Fonts\BrutalType-Black.eot" />
-    <Resource Include="Fonts\BrutalType-Black.ttf" />
-    <None Include="Fonts\BrutalType-Black.woff" />
-    <None Include="Fonts\BrutalType-Black.woff2" />
-    <None Include="Fonts\BrutalType-Bold.eot" />
-    <Resource Include="Fonts\BrutalType-Bold.ttf" />
-    <None Include="Fonts\BrutalType-Bold.woff" />
-    <None Include="Fonts\BrutalType-Bold.woff2" />
-    <None Include="Fonts\BrutalType-ExtraBold.eot" />
-    <Resource Include="Fonts\BrutalType-ExtraBold.ttf" />
-    <None Include="Fonts\BrutalType-ExtraBold.woff" />
-    <None Include="Fonts\BrutalType-ExtraBold.woff2" />
-    <None Include="Fonts\BrutalType-ExtraLight.eot" />
-    <Resource Include="Fonts\BrutalType-ExtraLight.ttf" />
-    <None Include="Fonts\BrutalType-ExtraLight.woff" />
-    <None Include="Fonts\BrutalType-ExtraLight.woff2" />
-    <None Include="Fonts\BrutalType-Light.eot" />
-    <Resource Include="Fonts\BrutalType-Light.ttf" />
-    <None Include="Fonts\BrutalType-Light.woff" />
-    <None Include="Fonts\BrutalType-Light.woff2" />
-    <None Include="Fonts\BrutalType-Medium.eot" />
-    <Resource Include="Fonts\BrutalType-Medium.ttf" />
-    <None Include="Fonts\BrutalType-Medium.woff" />
-    <None Include="Fonts\BrutalType-Medium.woff2" />
-    <None Include="Fonts\BrutalType-Thin.eot" />
-    <Resource Include="Fonts\BrutalType-Thin.ttf" />
-    <None Include="Fonts\BrutalType-Thin.woff" />
-    <None Include="Fonts\BrutalType-Thin.woff2" />
-    <None Include="Fonts\BrutalType.eot" />
-    <Resource Include="Fonts\BrutalType.ttf" />
-    <None Include="Fonts\BrutalType.woff" />
-    <None Include="Fonts\BrutalType.woff2" />
+    <Resource Include="Fonts\segmdl2.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,7 +155,75 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\LoginView.xaml">
+    <Page Include="ResourcesDictionary\ButtonsStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\CheckBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResourcesDictionary\ComboBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResourcesDictionary\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResourcesDictionary\IconsStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\ProgressBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\TextBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDictionary\Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\LoadingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\PreparingToLaunch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\StorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\TypeOfSignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,9 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ResourcesDictionary\" />
+    <Page Include="СustomControls\SearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -175,6 +247,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\brave.png" />
+    <Resource Include="Images\EpicIcon.ico" />
+    <Resource Include="Images\fortnite.jpg" />
+    <Resource Include="Images\googleicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\telegram.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
