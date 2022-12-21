@@ -12,7 +12,6 @@ namespace launcher_master.Repositories
         {
             throw new NotImplementedException();
         }
-
         public bool AuthenticateUser(NetworkCredential credential)
         {
             bool validUser;
@@ -30,27 +29,22 @@ namespace launcher_master.Repositories
 
             return validUser;
         }
-
         public void Edit(UserModel userModel)
         {
             throw new NotImplementedException();
         }
-
         public IEnumerable<UserModel> GetByAll()
         {
             throw new NotImplementedException();
         }
-
         public UserModel GetById(int id)
         {
             throw new NotImplementedException();
         }
-
         public UserModel GetBySurname(string username)
         {
             throw new NotImplementedException();
         }
-
         public void Remove(int id)
         {
             throw new NotImplementedException();

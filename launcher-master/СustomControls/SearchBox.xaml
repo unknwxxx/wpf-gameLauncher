@@ -21,9 +21,9 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type UserControl}">
                         <Border
-    Name="bd"
-    Background="{StaticResource SearchBackgroundBrush}"
-    CornerRadius="4">
+                            Name="bd"
+                            Background="{StaticResource SearchBackgroundBrush}"
+                            CornerRadius="20">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="50"/>
@@ -51,6 +51,7 @@
                                     HorizontalContentAlignment="Left"
                                     VerticalContentAlignment="Center"
                                     Background="Transparent"
+                                    CaretBrush="White"
                                     BorderThickness="0"
                                     Margin="-1,0,0,0"
                                     FontSize="15"

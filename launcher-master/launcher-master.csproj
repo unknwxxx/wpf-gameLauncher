@@ -97,6 +97,7 @@
     <Compile Include="View\Pages\LoadingPage.xaml.cs">
       <DependentUpon>LoadingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\LoadingPageManager.cs" />
     <Compile Include="View\Pages\PreparingToLaunch.xaml.cs">
       <DependentUpon>PreparingToLaunch.xaml</DependentUpon>
     </Compile>
@@ -105,9 +106,6 @@
     </Compile>
     <Compile Include="View\Pages\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\StorePage.xaml.cs">
-      <DependentUpon>StorePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\TypeOfSignIn.xaml.cs">
       <DependentUpon>TypeOfSignIn.xaml</DependentUpon>
@@ -219,10 +217,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\StorePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Pages\TypeOfSignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -262,6 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\telegram.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GenshinImpact.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

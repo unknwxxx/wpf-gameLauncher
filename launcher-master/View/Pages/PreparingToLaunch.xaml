@@ -11,8 +11,8 @@
     <Grid>
         <Grid
             x:Name="MainGrid"
-            Height="200"
-            Width="370"
+            Height="210"
+            Width="380"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Background="#212121"

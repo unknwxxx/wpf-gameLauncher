@@ -44,23 +44,7 @@
                         IconBackground="#303030"
                         IconBackgroundHover="#363636"
                         IconFill="{StaticResource SignInIconsBackBrush}"/>
-
-                        <AttachedProperties:LoginServiceButtons
-                        Content="Sign in with Google"
-                        IconHeight="25"
-                        IconWidth="25"
-                        ImageIcon="{DynamicResource GoogleImage}"
-                        IconBackground="{DynamicResource GoogleBackBrush}"
-                        IconBackgroundHover="{DynamicResource GoogleBackHoverBrush}"/>
-
-                        <AttachedProperties:LoginServiceButtons
-                        Content="Sign in with Telegram"
-                        IconHeight="25"
-                        IconWidth="25"
-                        ImageIcon="{DynamicResource TelegramImage}"
-                        IconBackground="{StaticResource TelegramBackBrush}"
-                        IconBackgroundHover="{StaticResource TelegramBackBrush}"
-                        IconFill="{StaticResource SignInIconsBackBrush}"/>
+                        
 
                         <TextBlock Foreground="#99FFFFFF"
                                    FontFamily="Brutal Type"
