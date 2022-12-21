@@ -14,9 +14,8 @@
         Style="{StaticResource {x:Type Window}}">
 
     <Grid>
-
         <Frame Name="MainFrame"
-               Source="Pages/SignInPage.xaml"
+               Source="Pages/LoadingPage.xaml"
                NavigationUIVisibility="Hidden"
                ></Frame>
     </Grid>

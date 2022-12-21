@@ -74,7 +74,7 @@
                             <Hyperlink Foreground="White"
                                            FontWeight="Normal"
                                            TextDecorations="Underline"
-                                           Click="SignInLater_OnClick">
+                                          >
                                            Sign In Later
                                     </Hyperlink>
                         </TextBlock>

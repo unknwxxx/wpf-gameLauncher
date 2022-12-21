@@ -108,14 +108,11 @@
     <Compile Include="View\Pages\LoadingPage.xaml.cs">
       <DependentUpon>LoadingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\PreparingToLaunch.xaml.cs">
-      <DependentUpon>PreparingToLaunch.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Pages\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\TypeOfSignIn.xaml.cs">
       <DependentUpon>TypeOfSignIn.xaml</DependentUpon>
@@ -215,15 +212,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\PreparingToLaunch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\SettingsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Pages\SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\StorePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

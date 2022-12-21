@@ -6,17 +6,17 @@
       xmlns:local="clr-namespace:launcher_master.View.Pages" xmlns:viewModel="clr-namespace:launcher_master.ViewModels" xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="580" d:DesignWidth="1040">
+      d:DesignHeight="580" d:DesignWidth="1040"
+      Visibility="{Binding IsViewVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
 
+    <Page.DataContext>
+        <viewModel:LoginViewModel/>
+    </Page.DataContext>
+    
     <Page.Resources>
         <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
     </Page.Resources>
-    <Page.DataContext>
-        <viewModel:LoginViewModel IsViewVisible="True" Login="" ErrorMessage=""></viewModel:LoginViewModel>
-    </Page.DataContext>
-    <Page.Visibility>
-        <Binding Path="IsViewVisible" Converter="{StaticResource VisibilityConverter}" Mode="TwoWay"/>
-    </Page.Visibility>
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -28,17 +28,17 @@
                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                       Margin="5">
 
-            <Border x:Name="Background" Grid.Row="1" 
-                    Margin="0, 25, 0, 50" 
-                    Width="450" Height="600" 
+            <Border Grid.Row="1" 
+                    Margin="0, 25, 0, 50"
+                    Width="460" Height="600" 
                     RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" 
-                    Background="#212121" 
+                    Background="#222222" 
                     VerticalAlignment="Center" HorizontalAlignment="Center">
 
                 <StackPanel
                             VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                    <TextBox    
+                    <TextBox
                                  x:Name="LoginTextBox"
                                  Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}"  
                                  Width="350" 
@@ -50,11 +50,12 @@
                         materialDesign:HintAssist.FloatingScale="0"
                         materialDesign:HintAssist.Foreground="Transparent"
                         BorderThickness="1"
-                        BorderBrush="#B4FFFFFF"
+                        BorderBrush="#B5FFFFFF"
                         Foreground="#8FFFFFFF"
-                        FontSize="13"
+                        FontSize="14"
                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
                         CaretBrush="White" SelectionBrush="#5FFFFFFF">
+
 
                     </TextBox>
 
@@ -94,12 +95,11 @@
                                 FontSize="14" 
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                materialDesign:ButtonAssist.CornerRadius="5"
-                                >
+                                materialDesign:ButtonAssist.CornerRadius="5">
 
                     </Button>
 
-                    <TextBlock     Margin="0, 30, 0, 0"
+                    <TextBlock     Margin="0, 15, 0, 0"
                                    Foreground="#99FFFFFF"
                                    Width="350"
                                    FontWeight="Medium"
@@ -114,7 +114,9 @@
                                     </Hyperlink>
                     </TextBlock>
 
-                    <TextBlock  Foreground="#8BFFFFFF"
+                    <TextBlock  
+                                Margin="0, 15, 0, 0"
+                                Foreground="#8BFFFFFF"
                                 Width="350"
                                 FontWeight="Medium"
                                 FontSize="14"
@@ -138,6 +140,7 @@
                     </TextBlock>
 
                     <TextBlock
+                                   Margin="0, 5, 0, 0"
                                    Foreground="#99FFFFFF"
                                    FontFamily="Brutal Type"
                                    FontWeight="Medium"
@@ -146,7 +149,7 @@
                                    TextAlignment="Center"
                                    HorizontalAlignment="Center"
                                    LineHeight="20">
-                                <Run Text="Back to"/>
+                                   <Run Text="Back to"/>
                         
                         <Hyperlink Foreground="White"
                                            FontWeight="Normal"

@@ -12,10 +12,10 @@ namespace launcher_master.ViewModels
 {
     public class LoginViewModel : ViewModelBase
     {
-        private string _login;
-        private SecureString _password;
-        private string _errorMessage;
-        private bool _isViewVisible = true;
+        private string _login = null;
+        private SecureString _password = null;
+        private string _errorMessage = null;
+        private bool _isViewVisible;
 
         private IUserRepository userRepository;
 
@@ -76,8 +76,6 @@ namespace launcher_master.ViewModels
 
         }
 
-        //!-->Commands
-
         public ICommand LoginCommand { get; }
         public ICommand RecoverPasswordCommand { get; }
         public ICommand ShowPasswordCommand { get; }
@@ -100,15 +98,10 @@ namespace launcher_master.ViewModels
 
         private bool CanExecuteLoginCommand(object obj)
         {
-            bool validData;
-
             if (string.IsNullOrWhiteSpace(Login) || Login.Length < 4 || Password == null || Password.Length < 4)
-                validData = false;
+                return false;
             else
-                validData = true;
-
-            return validData;
-
+                return true;
         }
 
         private void ExecuteLoginCommand(object obj)

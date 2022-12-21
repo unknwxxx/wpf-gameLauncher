@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace launcher_master.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SettingsPage.xaml
+    /// Логика взаимодействия для StorePage.xaml
     /// </summary>
-    public partial class SettingsPage : Page
+    public partial class StorePage : Page
     {
-        public SettingsPage()
+        public StorePage()
         {
             InitializeComponent();
         }

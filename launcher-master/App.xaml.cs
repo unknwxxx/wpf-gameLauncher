@@ -20,6 +20,8 @@ namespace launcher_master
             {
                 if (mainWindow.IsVisible == false && mainWindow.IsLoaded)
                 {
+                    LoadingPage loadingPage = new LoadingPage(new Uri("View\\Pages\\StorePage.xaml", UriKind.RelativeOrAbsolute));
+                    loadingPage.Start(sender, e);
                 }
             };
         }

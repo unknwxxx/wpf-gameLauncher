@@ -7,13 +7,31 @@ namespace launcher_master.View.Pages
 {
     public partial class LoadingPage : Page
     {
-        readonly DispatcherTimer _dispatcherTimer = new DispatcherTimer();
+        private readonly DispatcherTimer _dispatcherTimer = new DispatcherTimer();
+        private readonly Uri _view = new Uri("View\\Pages\\SignInPage.xaml", UriKind.RelativeOrAbsolute);
+
+        public LoadingPage(Uri view)
+        {
+            _view = view;
+            InitializeComponent();
+            _dispatcherTimer.Tick += _dispatcherTimer_Tick;
+            _dispatcherTimer.Interval = new TimeSpan(0, 0, 2);
+            _dispatcherTimer.Start();
+
+        }
+
         public LoadingPage()
         {
             InitializeComponent();
             _dispatcherTimer.Tick += _dispatcherTimer_Tick;
             _dispatcherTimer.Interval = new TimeSpan(0, 0, 2);
             _dispatcherTimer.Start();
+
+        }
+
+        public void Start(object sender, EventArgs e)
+        {
+            _dispatcherTimer_Tick(sender, e);
         }
 
         private void _dispatcherTimer_Tick(object sender, EventArgs e)
@@ -30,7 +48,12 @@ namespace launcher_master.View.Pages
 
         private void _dispatcherTimer_Tick1(object sender, EventArgs e)
         {
+            if (Application.Current.MainWindow != null)
+            {
+                ((MainView)Application.Current.MainWindow).MainFrame.Navigate(_view, UriKind.RelativeOrAbsolute);
+            }
             _dispatcherTimer.Stop();
+
         }
     }
 }

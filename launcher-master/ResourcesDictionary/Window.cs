@@ -32,6 +32,5 @@ namespace launcher_master.ResourcesDictionary
             window.Close();
         }
 
-
     }
 }
