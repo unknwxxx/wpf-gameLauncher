@@ -16,7 +16,7 @@
     <Grid>
 
         <Frame Name="MainFrame"
-               Source="Pages/LoadingPage.xaml"
+               Source="Pages/SignInPage.xaml"
                NavigationUIVisibility="Hidden"
                ></Frame>
     </Grid>

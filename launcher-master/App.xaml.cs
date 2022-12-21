@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using launcher_master.View.Pages;
 
 namespace launcher_master
 {
@@ -15,13 +16,12 @@ namespace launcher_master
             MainView mainWindow = new MainView();
             mainWindow.Show();
 
-            //mainWindow.IsVisibleChanged += (s, ev) =>
-            //{
-            //    if (mainWindow.IsVisible == false && mainWindow.IsLoaded)
-            //    {
-            //        ((MainView)Current.MainWindow).MainFrame.Navigate(new Uri("View\\Pages\\StorePage.xaml", UriKind.RelativeOrAbsolute));
-            //    }
-            //};
+            mainWindow.IsVisibleChanged += (s, ev) =>
+            {
+                if (mainWindow.IsVisible == false && mainWindow.IsLoaded)
+                {
+                }
+            };
         }
     }
 }

@@ -15,7 +15,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" 
+                      VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                      Margin="5">
+            
             <Border 
                 Margin="0, 25, 0, 25"
                 MinHeight="600"
@@ -24,26 +27,30 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 CornerRadius="6">
-                <Grid>
-                    <TextBlock Text="Sign in "
+                
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto">
+                    
+                    <StackPanel Width="Auto" Height="Auto">
+
+                        <TextBlock Text="Log in to your account using"
                                FontFamily="Brutal Type"
-                               FontWeight="Bold"
-                               FontSize="18"
+                               FontWeight="Medium"
+                               FontSize="15"
                                Foreground="{StaticResource CaptionFontBrush}"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="0, 100, 0, 0"/>
-                    
-                    <StackPanel Margin="0, 175, 0, 0">
+                               />
 
                         <AttachedProperties:LoginServiceButtons
                         Click="SignInDragGames_OnClick"
-                        Content="Sign in with DragGames"
+                        Content="Log in with your account"
+                        FontWeight="Medium"
                         IconHeight="25"
                         IconWidth="25"
                         IconBackground="#303030"
                         IconBackgroundHover="#363636"
-                        IconFill="{StaticResource SignInIconsBackBrush}"/>
+                        IconFill="{StaticResource SignInIconsBackBrush}"
+                        Margin="0, 20, 0, 20"/>
                         
 
                         <TextBlock Foreground="#99FFFFFF"
@@ -52,9 +59,9 @@
                                    FontSize="14"
                                    TextAlignment="Center"
                                    HorizontalAlignment="Center"
-                                   Margin="0, 12"
-                                   LineHeight="20">
-                                <Run Text="Don`t have an Drag Games account?"/>
+                                   LineHeight="20"
+                                   Width="350">
+                                <Run Text="Don`t have an account?"/>
                                 <Hyperlink Foreground="White"
                                            FontWeight="Normal"
                                            TextDecorations="Underline">
@@ -75,26 +82,5 @@
                 </Grid>
             </Border>
         </ScrollViewer>
-
-        <Button Grid.Row="2"
-                Click="Setting_OnClick"
-                Content="{StaticResource SettingsIcon}"
-                FontSize="14"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                RenderOptions.BitmapScalingMode="HighQuality"
-                Margin="35,0, 0, 30">
-
-            <Button.Style>
-                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnly.Button}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource HoverButtonBrush}"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-
-        </Button>
     </Grid>
 </Page>

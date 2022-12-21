@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:launcher_master.View.Pages" xmlns:viewModel="clr-namespace:launcher_master.ViewModels" xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="580" d:DesignWidth="1040">
 
@@ -23,50 +24,48 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" 
+                      VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                      Margin="5">
 
             <Border x:Name="Background" Grid.Row="1" 
                     Margin="0, 25, 0, 50" 
-                    Width="460" Height="650" 
+                    Width="450" Height="600" 
                     RenderOptions.BitmapScalingMode="HighQuality" CornerRadius="6" 
                     Background="#212121" 
                     VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                <StackPanel Width="460" Height="650" 
+                <StackPanel
                             VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                    <TextBlock     Width="320"  
-                                   FontSize="17" 
-                                   Margin="0, 100, 0, 50" 
-                                   Text="Sign in with an Drag Games account."
-                                   Foreground="White"
-                                   TextAlignment="Center" 
-                                   TextDecorations="{x:Null}" 
-                                   TextWrapping="Wrap" 
-                                   FontWeight="Medium" 
-                                   FontFamily="Brutal type"/>
-
-                    <TextBox Style="{StaticResource TextBoxStyle}"
+                    <TextBox    
                                  x:Name="LoginTextBox"
                                  Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}"  
                                  Width="350" 
                                  Height="60"
-                                 Padding="15, 0, 0, 0" 
-                                 MaxLength="50" 
-                                 MaxLines="50">
                         
-                        
+                        materialDesign:HintAssist.Hint= "Enter Username"
+                        materialDesign:HintAssist.Background="Transparent"
+                        materialDesign:HintAssist.FloatingOffset="0, 0"
+                        materialDesign:HintAssist.FloatingScale="0"
+                        materialDesign:HintAssist.Foreground="Transparent"
+                        BorderThickness="1"
+                        BorderBrush="#B4FFFFFF"
+                        Foreground="#8FFFFFFF"
+                        FontSize="13"
+                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                        CaretBrush="White" SelectionBrush="#5FFFFFFF">
 
                     </TextBox>
 
-                    <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Margin="0, 40, 0 , 0" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                                Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
+                    <сustomcontrols:BindablePasswordBox x:Name="PasswordTextBox" Margin="0, 30, 0 , 0" 
+                                                        Password="{Binding Password, Mode = TwoWay, UpdateSourceTrigger = PropertyChanged}">
 
                     </сustomcontrols:BindablePasswordBox>
 
-                    <TextBlock Name="TextBlockErrorMessage"
+                    <!--<TextBlock Name="TextBlockErrorMessage"
                                Width="350"
-                               FontSize="12" 
+                               FontSize="14" 
                                Text="{Binding ErrorMessage}" 
                                FontFamily="Brutal type" 
                                FontWeight="Normal" 
@@ -84,85 +83,30 @@
                             </Style>
                         </TextBlock.Style>
                         
-                    </TextBlock>
-
-
-                    <Grid Width="350" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <CheckBox Width="25"
-                                      Grid.Column="0"
-                                      Height="25"
-                                      Foreground="White"
-                                      Background="#FF353535" 
-                                      BorderBrush="#FF353535" 
-                                      OpacityMask="White"
-                                      ClickMode="Press"/>
-
-                        <TextBlock Grid.Column="1"
-                                   Height="25" 
-                                   Padding="0, 5, 0, 0"
-                                   Margin="10, 0, 0, 0"
-                                   FontFamily="Brutal type"
-                                   HorizontalAlignment="Left"
-                                   FontSize="14"
-                                   >
-                                <Hyperlink Foreground="#99FFFFFF"
-                                           FontWeight="Medium"
-                                           TextDecorations="None">
-                                           Remember me
-                                    </Hyperlink>
-                        </TextBlock>
-
-                        <TextBlock     
-                                       Padding="0, 5, 0, 0"
-                                       Foreground="White"
-                                       Grid.Column="2"
-                                       HorizontalAlignment="Right"
-                                       FontFamily="Brutal Type"
-                                       FontWeight="Normal"
-                                       FontSize="14">
-                                        
-                            <Hyperlink Foreground="White"
-                                           FontWeight="Normal"
-                                           TextDecorations="Underline">
-                                           Fargot your Password?
-                                    </Hyperlink>
-
-                        </TextBlock>
-
-                    </Grid>
+                    </TextBlock>-->
 
                     <Button     Width="350" 
                                 Height="60"
-                                Style="{ StaticResource Rounded.Button}" 
+                                Style="{ StaticResource MaterialDesignFlatMidBgButton}" 
                                 Command="{Binding LoginCommand}" 
-                                FontFamily="Brutal type"
-                                Margin="0,20,0,0" 
+                                Margin="0,30,0,0" 
                                 Content="Log in now" 
                                 FontSize="14" 
-                                FontWeight="Medium" 
-                                HorizontalAlignment="Center" 
+                                HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                Click="SignIn_OnClick">
+                                materialDesign:ButtonAssist.CornerRadius="5"
+                                >
 
                     </Button>
 
-                    <TextBlock     Margin="0, 20, 0, 20"
+                    <TextBlock     Margin="0, 30, 0, 0"
                                    Foreground="#99FFFFFF"
-                                   Width="340"
-                                   FontFamily="Brutal Type"
+                                   Width="350"
                                    FontWeight="Medium"
                                    FontSize="14"
                                    TextAlignment="Center"
                                    HorizontalAlignment="Center"
                                    LineHeight="20">
-                                
                                 <Hyperlink Foreground="White"
                                            FontWeight="Normal"
                                            TextDecorations="Underline">
@@ -170,38 +114,35 @@
                                     </Hyperlink>
                     </TextBlock>
 
-                    <TextBlock     Foreground="#99FFFFFF"
-                                   Width="340"
-                                   FontFamily="Brutal Type"
-                                   FontWeight="Medium"
-                                   FontSize="14"
-                                   TextAlignment="Center"
-                                   HorizontalAlignment="Center"
-                                   LineHeight="20">
+                    <TextBlock  Foreground="#8BFFFFFF"
+                                Width="350"
+                                FontWeight="Medium"
+                                FontSize="14"
+                                TextAlignment="Center"
+                                HorizontalAlignment="Center"
+                                LineHeight="20">
                                 <Run Text="Don`t have an Drag Games account?"/>
                                 <Hyperlink Foreground="White"
                                            FontWeight="Normal"
                                            TextDecorations="Underline">
                                            Sign Up
                                     </Hyperlink>
-                            
                                 <Run Text="or"/>
                             <LineBreak/>
                             
                             <Hyperlink Foreground="White"
-                                       
-                                           FontWeight="Normal"
-                                           TextDecorations="Underline">
-                                           Sign In Later
+                                       FontWeight="Normal"
+                                       TextDecorations="Underline">
+                                       Sign In Later
                                     </Hyperlink>
                     </TextBlock>
 
-                    <TextBlock     Margin="0, 5, 0, 0"
+                    <TextBlock
                                    Foreground="#99FFFFFF"
                                    FontFamily="Brutal Type"
                                    FontWeight="Medium"
                                    FontSize="14"
-                                   Width="340"
+                                   Width="350"
                                    TextAlignment="Center"
                                    HorizontalAlignment="Center"
                                    LineHeight="20">
@@ -209,8 +150,7 @@
                         
                         <Hyperlink Foreground="White"
                                            FontWeight="Normal"
-                                           TextDecorations="Underline"
-                                           Click="TypeOfSignIn_OnClick">
+                                           TextDecorations="Underline">
                                            all sign in options
                                     </Hyperlink>
                     </TextBlock>
@@ -219,7 +159,6 @@
         </ScrollViewer>
 
         <Button Grid.Row="2"
-                Click="Setting_OnClick"
                 Content="{StaticResource SettingsIcon}"
                 FontSize="14"
                 HorizontalAlignment="Left"
