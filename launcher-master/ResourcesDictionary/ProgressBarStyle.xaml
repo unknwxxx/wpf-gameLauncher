@@ -102,8 +102,8 @@
 
     <Style x:Key="CircularProgressBar" TargetType="{x:Type ProgressBar}">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="MinHeight" Value="20" />
-        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="MinHeight" Value="35" />
+        <Setter Property="MinWidth" Value="35" />
         <Setter Property="Template">
             
             <Setter.Value>

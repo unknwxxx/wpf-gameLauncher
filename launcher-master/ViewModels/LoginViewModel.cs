@@ -73,7 +73,6 @@ namespace launcher_master.ViewModels
                 _isViewVisible = value;
                 OnPropertyChanged(nameof(IsViewVisible));
             }
-
         }
 
         public ICommand LoginCommand { get; }

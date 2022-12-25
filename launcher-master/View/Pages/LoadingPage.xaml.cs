@@ -29,11 +29,6 @@ namespace launcher_master.View.Pages
 
         }
 
-        public void Start(object sender, EventArgs e)
-        {
-            _dispatcherTimer_Tick(sender, e);
-        }
-
         private void _dispatcherTimer_Tick(object sender, EventArgs e)
         {
             MainGrid.Height += 50;

@@ -3,14 +3,16 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:launcher_master.View.Pages" xmlns:viewModel="clr-namespace:launcher_master.ViewModels" xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
+      xmlns:local="clr-namespace:launcher_master.View.Pages" 
+      xmlns:viewModel="clr-namespace:launcher_master.ViewModels" 
+      xmlns:сustomcontrols="clr-namespace:launcher_master.СustomControls"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="580" d:DesignWidth="1040"
       Visibility="{Binding IsViewVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
 
     <Page.DataContext>
-        <viewModel:LoginViewModel/>
+        <viewModel:LoginViewModel ErrorMessage="" Login="" IsViewVisible="True"/>
     </Page.DataContext>
     
     <Page.Resources>
@@ -24,10 +26,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="Scroll" Grid.Row="1" Width="Auto" Height="Auto" 
-                      VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                      Margin="5">
-
+        
+        
+        <ScrollViewer Grid.Row="1"  Width="Auto" Height="Auto"
+                      Margin="5"
+                      >
             <Border Grid.Row="1" 
                     Margin="0, 25, 0, 50"
                     Width="460" Height="600" 
@@ -43,7 +46,7 @@
                                  Text="{Binding Login, UpdateSourceTrigger = PropertyChanged}"  
                                  Width="350" 
                                  Height="60"
-                        
+                                 Padding="10, 20, 0, 0"
                         materialDesign:HintAssist.Hint= "Enter Username"
                         materialDesign:HintAssist.Background="Transparent"
                         materialDesign:HintAssist.FloatingOffset="0, 0"
@@ -95,7 +98,8 @@
                                 FontSize="14" 
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                materialDesign:ButtonAssist.CornerRadius="5">
+                                materialDesign:ButtonAssist.CornerRadius="5"
+                                >
 
                     </Button>
 
@@ -173,7 +177,7 @@
                 <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconOnly.Button}">
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="#FFEEDC99"/>
+                            <Setter Property="Foreground" Value="#B5FFFFFF"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>

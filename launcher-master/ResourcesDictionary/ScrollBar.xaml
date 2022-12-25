@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+    <!--<Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -31,7 +31,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+    <Style x:Name="CustomScrollBar" TargetType="{x:Type ScrollBar}">
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
         <Setter Property="Foreground" Value="#353535"/>
         <Setter Property="Background" Value="White"/>
@@ -91,6 +91,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
 </ResourceDictionary>
